@@ -62,32 +62,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ==================== PASSIONE MODE TOGGLE ====================
-  const passioneToggle = document.getElementById('passioneToggle');
+  // ==================== PASSIONE MODE ON SCROLL BACK ====================
+  const heroSection = document.getElementById('hero');
   const body = document.body;
+  let hasScrolledPastHero = false;
   
-  // Check saved preference
-  const savedPassioneMode = localStorage.getItem('squisita_passione_mode');
-  if (savedPassioneMode === 'true') {
+  // Check if already activated this session
+  const passioneActivated = sessionStorage.getItem('squisita_passione_activated');
+  if (passioneActivated === 'true') {
     body.classList.add('passione-mode');
-    passioneToggle.classList.add('passione-toggle--active');
+    hasScrolledPastHero = true;
   }
   
-  if (passioneToggle) {
-    passioneToggle.addEventListener('click', function() {
-      body.classList.toggle('passione-mode');
-      this.classList.toggle('passione-toggle--active');
-      
-      // Save preference
-      const isActive = body.classList.contains('passione-mode');
-      localStorage.setItem('squisita_passione_mode', isActive);
-      
-      // Optional: Add a subtle animation feedback
-      this.style.transform = 'scale(1.2)';
-      setTimeout(() => {
-        this.style.transform = '';
-      }, 200);
+  if (heroSection) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        
+        // User has scrolled past the hero
+        if (!entry.isIntersecting && window.scrollY > heroBottom) {
+          hasScrolledPastHero = true;
+        }
+        
+        // User is back in hero view AND had scrolled past before
+        if (entry.isIntersecting && hasScrolledPastHero && !body.classList.contains('passione-mode')) {
+          body.classList.add('passione-mode');
+          sessionStorage.setItem('squisita_passione_activated', 'true');
+        }
+      });
+    }, {
+      threshold: 0.3 // Trigger when 30% of hero is visible
     });
+    
+    heroObserver.observe(heroSection);
   }
 
   // ==================== SMOOTH SCROLL ====================
