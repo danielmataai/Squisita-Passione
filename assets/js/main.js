@@ -67,13 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const body = document.body;
   let hasScrolledPastHero = false;
   
-  // Check if already activated this session
-  const passioneActivated = sessionStorage.getItem('squisita_passione_activated');
-  if (passioneActivated === 'true') {
-    body.classList.add('passione-mode');
-    hasScrolledPastHero = true;
-  }
-  
   if (heroSection) {
     const heroObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -87,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // User is back in hero view AND had scrolled past before
         if (entry.isIntersecting && hasScrolledPastHero && !body.classList.contains('passione-mode')) {
           body.classList.add('passione-mode');
-          sessionStorage.setItem('squisita_passione_activated', 'true');
         }
       });
     }, {
