@@ -62,6 +62,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // ==================== PASSIONE MODE TOGGLE ====================
+  const passioneToggle = document.getElementById('passioneToggle');
+  const body = document.body;
+  
+  // Check saved preference
+  const savedPassioneMode = localStorage.getItem('squisita_passione_mode');
+  if (savedPassioneMode === 'true') {
+    body.classList.add('passione-mode');
+    passioneToggle.classList.add('passione-toggle--active');
+  }
+  
+  if (passioneToggle) {
+    passioneToggle.addEventListener('click', function() {
+      body.classList.toggle('passione-mode');
+      this.classList.toggle('passione-toggle--active');
+      
+      // Save preference
+      const isActive = body.classList.contains('passione-mode');
+      localStorage.setItem('squisita_passione_mode', isActive);
+      
+      // Optional: Add a subtle animation feedback
+      this.style.transform = 'scale(1.2)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 200);
+    });
+  }
+
   // ==================== SMOOTH SCROLL ====================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

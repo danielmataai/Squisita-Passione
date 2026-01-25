@@ -388,6 +388,54 @@ p {
   color: var(--color-black);
 }
 
+/* Passione Toggle */
+.passione-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.passione-toggle:hover {
+  border-color: var(--color-tomato);
+  color: var(--color-tomato);
+  transform: scale(1.1);
+}
+
+.passione-toggle--active {
+  background: var(--color-tomato);
+  border-color: var(--color-tomato);
+  color: var(--color-white);
+}
+
+.passione-toggle--active:hover {
+  background: var(--color-tomato-dark);
+  color: var(--color-white);
+}
+
+.header--scrolled .passione-toggle {
+  border-color: rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.5);
+}
+
+.header--scrolled .passione-toggle:hover {
+  border-color: var(--color-tomato);
+  color: var(--color-tomato);
+}
+
+.header--scrolled .passione-toggle--active {
+  background: var(--color-tomato);
+  border-color: var(--color-tomato);
+  color: var(--color-white);
+}
+
 /* Mobile Menu Toggle */
 .header__menu-toggle {
   display: none;
@@ -425,6 +473,30 @@ p {
   position: absolute;
   inset: 0;
   z-index: -2;
+  background-color: var(--color-cream);
+  transition: background-color 0.6s ease;
+}
+
+/* Passione Mode Hero */
+.passione-mode .hero__background {
+  background-color: var(--color-tomato);
+}
+
+/* Hero Images - Default and Passione versions */
+.hero__img--default {
+  display: block;
+}
+
+.hero__img--passione {
+  display: none;
+}
+
+.passione-mode .hero__img--default {
+  display: none;
+}
+
+.passione-mode .hero__img--passione {
+  display: block;
 }
 
 .hero__background img,
@@ -510,10 +582,15 @@ p {
   font-size: var(--text-base);
   font-weight: 300;
   line-height: 2;
-  color: #ffffff;
+  color: var(--color-charcoal);
   max-width: 650px;
   margin: 0 auto var(--space-3xl);
   animation: fadeInUp 1s ease 0.7s both;
+  transition: color 0.6s ease;
+}
+
+.passione-mode .hero__description {
+  color: #ffffff;
 }
 
 .hero__cta {
@@ -522,6 +599,48 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   animation: fadeInUp 1s ease 0.9s both;
+}
+
+/* Hero buttons - Default (cream background) */
+.hero .btn--white {
+  background-color: var(--color-tomato);
+  color: var(--color-white);
+}
+
+.hero .btn--white:hover {
+  background-color: var(--color-tomato-dark);
+}
+
+.hero .btn--ghost {
+  background-color: transparent;
+  color: var(--color-tomato);
+  border: 1px solid var(--color-tomato);
+}
+
+.hero .btn--ghost:hover {
+  background-color: var(--color-tomato);
+  color: var(--color-white);
+}
+
+/* Hero buttons - Passione Mode (red background) */
+.passione-mode .hero .btn--white {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.passione-mode .hero .btn--white:hover {
+  background-color: var(--color-cream);
+}
+
+.passione-mode .hero .btn--ghost {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.passione-mode .hero .btn--ghost:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 /* Hero Responsive */
