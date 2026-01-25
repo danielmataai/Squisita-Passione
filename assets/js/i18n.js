@@ -1,0 +1,312 @@
+/* =====================================================
+   SQUISITA PASSIONE - Internationalization (i18n)
+   English (EN) & French (FR) Support
+   ===================================================== */
+
+const translations = {
+  en: {
+    // Navigation
+    'nav.experiences': 'Experiences',
+    'nav.about': 'About',
+    'nav.gallery': 'Gallery',
+    'nav.tours': 'Tours',
+    'nav.contact': 'Contact',
+    'nav.book': 'Book Now',
+    
+    // Hero
+    'hero.eyebrow': 'Authentic Italian Culinary Experiences',
+    'hero.title': 'Squisita Passione',
+    'hero.subtitle': 'by Chef Davide Rizzardi',
+    'hero.description': "I'm an Italian chef passionate about food, travel, and the Italian way of life. Through cooking workshops, private dining, and informal gastronomy tours in Italy, I create genuine experiences for travellers who love discovering a place through its food.",
+    'hero.cta.explore': 'Explore Experiences',
+    'hero.cta.contact': 'Get in Touch',
+    'hero.scroll': 'Scroll to discover',
+    
+    // Services
+    'services.eyebrow': 'What I Offer',
+    'services.title': 'Culinary Experiences',
+    'services.subtitle': 'Three unique ways to immerse yourself in the art of Italian cuisine',
+    'services.cta': 'Learn More',
+    
+    'services.workshop.badge': 'Popular',
+    'services.workshop.title': 'Italian Cooking Workshops',
+    'services.workshop.description': 'Hands-on classes where you\'ll learn to prepare authentic Italian dishes, from fresh pasta to traditional regional recipes. Perfect for food lovers of all skill levels.',
+    'services.workshop.duration': '3-4 hours',
+    'services.workshop.guests': '2-12 guests',
+    
+    'services.private.badge': 'Exclusive',
+    'services.private.title': 'Private Chef',
+    'services.private.description': 'An intimate dining experience in your home or venue. I\'ll craft a personalized menu and prepare a memorable Italian feast for your special occasion.',
+    'services.private.availability': 'By appointment',
+    'services.private.location': 'Canada',
+    
+    'services.tours.badge': 'Adventure',
+    'services.tours.title': 'Italian Gastronomy Tours',
+    'services.tours.description': 'Informal culinary adventures through Italy\'s finest food destinations. Discover hidden gems, meet local artisans, and taste authentic regional flavors.',
+    'services.tours.duration': 'Multi-day',
+    'services.tours.location': 'Tuscany & more',
+    
+    // About
+    'about.eyebrow': 'About Me',
+    'about.title': 'Chef Davide Rizzardi',
+    'about.quote': '"Cooking is not just about food—it\'s about connection, tradition, and sharing the passion that makes Italian cuisine so special."',
+    'about.text1': 'Born and raised in Italy, I carry with me the rich culinary traditions passed down through generations. Now based in Canada, I\'ve made it my mission to share the authentic flavors and techniques of Italian cuisine with food lovers around the world.',
+    'about.text2': 'My passion extends beyond the kitchen—I believe that food is a gateway to understanding culture, history, and the art of living well. Whether you\'re joining me for a cooking workshop, a private dinner, or a tour through the Italian countryside, you\'ll experience the warmth and authenticity that defines Italian hospitality.',
+    'about.feature1.title': 'Authentic Traditions',
+    'about.feature1.text': 'Recipes passed down through generations',
+    'about.feature2.title': 'Fresh Ingredients',
+    'about.feature2.text': 'Quality products, locally sourced',
+    'about.feature3.title': 'Personal Touch',
+    'about.feature3.text': 'Intimate, customized experiences',
+    'about.feature4.title': 'Italian Passion',
+    'about.feature4.text': 'Love for food and la dolce vita',
+    
+    // Gallery
+    'gallery.eyebrow': 'Visual Journey',
+    'gallery.title': 'Moments of Passion',
+    'gallery.subtitle': 'A glimpse into the experiences, flavors, and memories we create together',
+    
+    // Tours
+    'tours.eyebrow': 'Firenze & Beyond',
+    'tours.title': 'Tour Destinations',
+    'tours.subtitle': 'Discover the authentic flavors of Tuscany through these carefully curated experiences with my trusted friends and partners',
+    
+    // CTA
+    'cta.title': 'Ready to Experience Italian Cuisine?',
+    'cta.text': 'Whether you\'re looking for a cooking workshop, a private dining experience, or an unforgettable tour through Italy, let\'s create something special together.',
+    'cta.button': 'Request a Quote',
+    
+    // Contact
+    'contact.eyebrow': 'Get in Touch',
+    'contact.title': 'Let\'s Create Something Delicious',
+    'contact.text': 'Have questions about my services? Ready to book an experience? I\'d love to hear from you. Reach out and let\'s start planning your culinary journey.',
+    'contact.email.label': 'Email',
+    'contact.location.label': 'Location',
+    'contact.location.text': 'Canada & Italy',
+    
+    // Form
+    'form.name.label': 'Name *',
+    'form.email.label': 'Email *',
+    'form.service.label': 'Interested In *',
+    'form.service.placeholder': 'Select an experience',
+    'form.service.workshop': 'Cooking Workshop',
+    'form.service.private': 'Private Chef',
+    'form.service.tour': 'Gastronomy Tour',
+    'form.service.other': 'Other',
+    'form.date.label': 'Preferred Date',
+    'form.guests.label': 'Number of Guests',
+    'form.message.label': 'Message *',
+    'form.submit': 'Send Request',
+    
+    // Footer
+    'footer.tagline': 'Authentic Italian culinary experiences by Chef Davide Rizzardi. Creating genuine connections through food, travel, and the Italian way of life.',
+    'footer.nav.experiences': 'Experiences',
+    'footer.nav.workshops': 'Cooking Workshops',
+    'footer.nav.private': 'Private Chef',
+    'footer.nav.tours': 'Gastronomy Tours',
+    'footer.nav.company': 'Company',
+    'footer.nav.about': 'About Chef Davide',
+    'footer.nav.gallery': 'Gallery',
+    'footer.nav.contact': 'Contact',
+    'footer.nav.connect': 'Connect',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Service'
+  },
+  
+  fr: {
+    // Navigation
+    'nav.experiences': 'Expériences',
+    'nav.about': 'À Propos',
+    'nav.gallery': 'Galerie',
+    'nav.tours': 'Tours',
+    'nav.contact': 'Contact',
+    'nav.book': 'Réserver',
+    
+    // Hero
+    'hero.eyebrow': 'Expériences Culinaires Italiennes Authentiques',
+    'hero.title': 'Squisita Passione',
+    'hero.subtitle': 'par le Chef Davide Rizzardi',
+    'hero.description': "Je suis un chef italien passionné par la cuisine, les voyages et l'art de vivre à l'italienne. À travers des ateliers de cuisine, des dîners privés et des circuits gastronomiques informels en Italie, je crée des expériences authentiques pour les voyageurs qui aiment découvrir un lieu à travers sa cuisine.",
+    'hero.cta.explore': 'Découvrir les Expériences',
+    'hero.cta.contact': 'Nous Contacter',
+    'hero.scroll': 'Défiler pour découvrir',
+    
+    // Services
+    'services.eyebrow': 'Ce que je propose',
+    'services.title': 'Expériences Culinaires',
+    'services.subtitle': 'Trois façons uniques de vous immerger dans l\'art de la cuisine italienne',
+    'services.cta': 'En Savoir Plus',
+    
+    'services.workshop.badge': 'Populaire',
+    'services.workshop.title': 'Ateliers de Cuisine Italienne',
+    'services.workshop.description': 'Des cours pratiques où vous apprendrez à préparer des plats italiens authentiques, des pâtes fraîches aux recettes régionales traditionnelles. Parfait pour les amoureux de la cuisine de tous niveaux.',
+    'services.workshop.duration': '3-4 heures',
+    'services.workshop.guests': '2-12 personnes',
+    
+    'services.private.badge': 'Exclusif',
+    'services.private.title': 'Chef Privé',
+    'services.private.description': 'Une expérience gastronomique intime chez vous ou dans votre lieu de réception. Je créerai un menu personnalisé et préparerai un festin italien mémorable pour votre occasion spéciale.',
+    'services.private.availability': 'Sur rendez-vous',
+    'services.private.location': 'Canada',
+    
+    'services.tours.badge': 'Aventure',
+    'services.tours.title': 'Tours Gastronomiques en Italie',
+    'services.tours.description': 'Des aventures culinaires informelles à travers les meilleures destinations gastronomiques d\'Italie. Découvrez des trésors cachés, rencontrez des artisans locaux et goûtez aux saveurs régionales authentiques.',
+    'services.tours.duration': 'Plusieurs jours',
+    'services.tours.location': 'Toscane et plus',
+    
+    // About
+    'about.eyebrow': 'À Propos',
+    'about.title': 'Chef Davide Rizzardi',
+    'about.quote': '"La cuisine n\'est pas seulement une question de nourriture—c\'est une question de connexion, de tradition et de partage de la passion qui rend la cuisine italienne si spéciale."',
+    'about.text1': 'Né et élevé en Italie, je porte en moi les riches traditions culinaires transmises de génération en génération. Maintenant basé au Canada, je me suis donné pour mission de partager les saveurs et techniques authentiques de la cuisine italienne avec les amoureux de la gastronomie du monde entier.',
+    'about.text2': 'Ma passion s\'étend au-delà de la cuisine—je crois que la nourriture est une porte d\'entrée pour comprendre la culture, l\'histoire et l\'art de bien vivre. Que vous vous joigniez à moi pour un atelier de cuisine, un dîner privé ou un tour à travers la campagne italienne, vous vivrez la chaleur et l\'authenticité qui définissent l\'hospitalité italienne.',
+    'about.feature1.title': 'Traditions Authentiques',
+    'about.feature1.text': 'Recettes transmises de génération en génération',
+    'about.feature2.title': 'Ingrédients Frais',
+    'about.feature2.text': 'Produits de qualité, localement sourcés',
+    'about.feature3.title': 'Touche Personnelle',
+    'about.feature3.text': 'Expériences intimes et personnalisées',
+    'about.feature4.title': 'Passion Italienne',
+    'about.feature4.text': 'Amour de la cuisine et de la dolce vita',
+    
+    // Gallery
+    'gallery.eyebrow': 'Voyage Visuel',
+    'gallery.title': 'Moments de Passion',
+    'gallery.subtitle': 'Un aperçu des expériences, des saveurs et des souvenirs que nous créons ensemble',
+    
+    // Tours
+    'tours.eyebrow': 'Florence et Au-delà',
+    'tours.title': 'Destinations des Tours',
+    'tours.subtitle': 'Découvrez les saveurs authentiques de la Toscane à travers ces expériences soigneusement sélectionnées avec mes amis et partenaires de confiance',
+    
+    // CTA
+    'cta.title': 'Prêt à Découvrir la Cuisine Italienne?',
+    'cta.text': 'Que vous recherchiez un atelier de cuisine, une expérience de dîner privé ou un tour inoubliable à travers l\'Italie, créons ensemble quelque chose de spécial.',
+    'cta.button': 'Demander un Devis',
+    
+    // Contact
+    'contact.eyebrow': 'Contactez-nous',
+    'contact.title': 'Créons Quelque Chose de Délicieux',
+    'contact.text': 'Vous avez des questions sur mes services? Prêt à réserver une expérience? J\'aimerais beaucoup avoir de vos nouvelles. Contactez-moi et commençons à planifier votre voyage culinaire.',
+    'contact.email.label': 'Email',
+    'contact.location.label': 'Emplacement',
+    'contact.location.text': 'Canada et Italie',
+    
+    // Form
+    'form.name.label': 'Nom *',
+    'form.email.label': 'Email *',
+    'form.service.label': 'Intéressé par *',
+    'form.service.placeholder': 'Sélectionnez une expérience',
+    'form.service.workshop': 'Atelier de Cuisine',
+    'form.service.private': 'Chef Privé',
+    'form.service.tour': 'Tour Gastronomique',
+    'form.service.other': 'Autre',
+    'form.date.label': 'Date Préférée',
+    'form.guests.label': 'Nombre de Personnes',
+    'form.message.label': 'Message *',
+    'form.submit': 'Envoyer la Demande',
+    
+    // Footer
+    'footer.tagline': 'Expériences culinaires italiennes authentiques par le Chef Davide Rizzardi. Créer des connexions authentiques à travers la nourriture, les voyages et l\'art de vivre à l\'italienne.',
+    'footer.nav.experiences': 'Expériences',
+    'footer.nav.workshops': 'Ateliers de Cuisine',
+    'footer.nav.private': 'Chef Privé',
+    'footer.nav.tours': 'Tours Gastronomiques',
+    'footer.nav.company': 'Entreprise',
+    'footer.nav.about': 'À Propos du Chef Davide',
+    'footer.nav.gallery': 'Galerie',
+    'footer.nav.contact': 'Contact',
+    'footer.nav.connect': 'Connecter',
+    'footer.privacy': 'Politique de Confidentialité',
+    'footer.terms': 'Conditions d\'Utilisation'
+  }
+};
+
+// ==================== I18N CLASS ====================
+class I18n {
+  constructor(defaultLang = 'en') {
+    this.currentLang = this.getSavedLanguage() || defaultLang;
+    this.translations = translations;
+    this.init();
+  }
+  
+  init() {
+    this.updatePageLanguage();
+    this.setupLanguageButtons();
+  }
+  
+  getSavedLanguage() {
+    return localStorage.getItem('squisita_lang');
+  }
+  
+  saveLanguage(lang) {
+    localStorage.setItem('squisita_lang', lang);
+  }
+  
+  setLanguage(lang) {
+    if (this.translations[lang]) {
+      this.currentLang = lang;
+      this.saveLanguage(lang);
+      this.updatePageLanguage();
+      this.updateLanguageButtons();
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = lang;
+    }
+  }
+  
+  translate(key) {
+    return this.translations[this.currentLang][key] || key;
+  }
+  
+  updatePageLanguage() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      const translation = this.translate(key);
+      
+      if (translation) {
+        // Handle different element types
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+          element.placeholder = translation;
+        } else if (element.tagName === 'OPTION') {
+          element.textContent = translation;
+        } else {
+          element.textContent = translation;
+        }
+      }
+    });
+    
+    // Update page title
+    document.title = `Squisita Passione | Chef Davide Rizzardi`;
+  }
+  
+  setupLanguageButtons() {
+    const langButtons = document.querySelectorAll('[data-lang]');
+    
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        this.setLanguage(lang);
+      });
+    });
+    
+    this.updateLanguageButtons();
+  }
+  
+  updateLanguageButtons() {
+    const langButtons = document.querySelectorAll('[data-lang]');
+    
+    langButtons.forEach(button => {
+      const lang = button.getAttribute('data-lang');
+      button.classList.toggle('header__lang-btn--active', lang === this.currentLang);
+    });
+  }
+}
+
+// Initialize i18n
+document.addEventListener('DOMContentLoaded', () => {
+  window.i18n = new I18n('en');
+});
