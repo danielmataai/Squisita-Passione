@@ -298,11 +298,16 @@ p {
 .header__logo-img {
   height: 40px;
   width: auto;
-  filter: brightness(0) invert(1);
   transition: var(--transition-base);
 }
 
-.header--scrolled .header__logo-img {
+/* Passione Mode - Header white text */
+.passione-mode .header__logo-img {
+  filter: brightness(0) invert(1);
+}
+
+.passione-mode.header--scrolled .header__logo-img,
+.passione-mode .header--scrolled .header__logo-img {
   filter: none;
 }
 
@@ -322,9 +327,18 @@ p {
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-black);
   position: relative;
   padding: var(--space-xs) 0;
+}
+
+.passione-mode .nav__link {
+  color: var(--color-white);
+}
+
+.passione-mode .header--scrolled .nav__link,
+.passione-mode.header--scrolled .nav__link {
+  color: var(--color-black);
 }
 
 .nav__link::after {
@@ -354,11 +368,23 @@ p {
   gap: var(--space-sm);
 }
 
+.header__lang-separator {
+  color: rgba(0,0,0,0.3);
+}
+
+.passione-mode .header__lang-separator {
+  color: rgba(255,255,255,0.3);
+}
+
+.header--scrolled .header__lang-separator {
+  color: rgba(0,0,0,0.3);
+}
+
 .header__lang-btn {
   font-size: var(--text-xs);
   font-weight: 500;
   letter-spacing: 0.1em;
-  color: var(--color-white);
+  color: var(--color-black);
   opacity: 0.6;
   transition: var(--transition-fast);
 }
@@ -368,6 +394,12 @@ p {
   opacity: 1;
 }
 
+.passione-mode .header__lang-btn {
+  color: var(--color-white);
+}
+
+.passione-mode .header--scrolled .header__lang-btn,
+.passione-mode.header--scrolled .header__lang-btn,
 .header--scrolled .header__lang-btn {
   color: var(--color-black);
 }
@@ -377,15 +409,37 @@ p {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-black);
   padding: var(--space-sm) var(--space-lg);
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(0,0,0,0.3);
   border-radius: var(--radius-sm);
 }
 
 .header__cta:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.passione-mode .header__cta {
+  color: var(--color-white);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.passione-mode .header__cta:hover {
   background-color: var(--color-white);
   color: var(--color-black);
+}
+
+.passione-mode .header--scrolled .header__cta,
+.passione-mode.header--scrolled .header__cta,
+.header--scrolled .header__cta {
+  color: var(--color-black);
+  border-color: rgba(0,0,0,0.3);
+}
+
+.header--scrolled .header__cta:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 /* Passione Toggle */
@@ -397,8 +451,8 @@ p {
   height: 36px;
   border-radius: var(--radius-full);
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
-  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.5);
   cursor: pointer;
   transition: var(--transition-base);
 }
@@ -417,6 +471,16 @@ p {
 
 .passione-toggle--active:hover {
   background: var(--color-tomato-dark);
+  color: var(--color-white);
+}
+
+.passione-mode .passione-toggle {
+  border-color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6);
+}
+
+.passione-mode .passione-toggle:hover {
+  border-color: var(--color-white);
   color: var(--color-white);
 }
 
@@ -450,8 +514,12 @@ p {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   transition: var(--transition-base);
+}
+
+.passione-mode .header__menu-toggle span {
+  background-color: var(--color-white);
 }
 
 .header--scrolled .header__menu-toggle span {
@@ -484,19 +552,19 @@ p {
 
 /* Hero Images - Default and Passione versions */
 .hero__img--default {
-  display: block;
+  display: block !important;
 }
 
 .hero__img--passione {
-  display: none;
+  display: none !important;
 }
 
 .passione-mode .hero__img--default {
-  display: none;
+  display: none !important;
 }
 
 .passione-mode .hero__img--passione {
-  display: block;
+  display: block !important;
 }
 
 .hero__background img,
