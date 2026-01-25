@@ -393,51 +393,6 @@ document.addEventListener('DOMContentLoaded', function() {
     tag.style.animationDelay = `${index * 0.05}s`;
   });
 
-  // ==================== CURSOR EFFECT (Optional - Desktop Only) ====================
-  if (window.innerWidth > 992) {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    cursor.style.cssText = `
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      border: 1px solid var(--color-tomato);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: difference;
-      opacity: 0;
-    `;
-    document.body.appendChild(cursor);
-    
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.opacity = '1';
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-    
-    document.addEventListener('mouseleave', () => {
-      cursor.style.opacity = '0';
-    });
-    
-    // Hover effect on links and buttons
-    const hoverElements = document.querySelectorAll('a, button, .service-card, .gallery__item');
-    hoverElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.style.width = '40px';
-        cursor.style.height = '40px';
-        cursor.style.background = 'rgba(197, 34, 51, 0.1)';
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.style.width = '20px';
-        cursor.style.height = '20px';
-        cursor.style.background = 'transparent';
-      });
-    });
-  }
-
 });
 
 // ==================== FORM VALIDATION HELPERS ====================
