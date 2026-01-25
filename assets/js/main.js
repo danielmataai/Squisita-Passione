@@ -64,29 +64,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ==================== PASSIONE MODE ON SCROLL BACK ====================
   const heroSection = document.getElementById('hero');
-  const body = document.body;
   let hasScrolledPastHero = false;
   
   if (heroSection) {
-    const heroObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-        
-        // User has scrolled past the hero
-        if (!entry.isIntersecting && window.scrollY > heroBottom) {
-          hasScrolledPastHero = true;
-        }
-        
-        // User is back in hero view AND had scrolled past before
-        if (entry.isIntersecting && hasScrolledPastHero && !body.classList.contains('passione-mode')) {
-          body.classList.add('passione-mode');
-        }
-      });
-    }, {
-      threshold: 0.3 // Trigger when 30% of hero is visible
+    window.addEventListener('scroll', function() {
+      const heroBottom = heroSection.offsetHeight;
+      const scrollY = window.scrollY;
+      
+      // User has scrolled past the hero
+      if (scrollY > heroBottom) {
+        hasScrolledPastHero = true;
+      }
+      
+      // User is back near top AND had scrolled past before
+      if (scrollY < heroBottom * 0.5 && hasScrolledPastHero && !document.body.classList.contains('passione-mode')) {
+        document.body.classList.add('passione-mode');
+      }
     });
-    
-    heroObserver.observe(heroSection);
   }
 
   // ==================== SMOOTH SCROLL ====================
