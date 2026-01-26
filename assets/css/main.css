@@ -1539,23 +1539,25 @@ p {
   justify-content: space-between;
   align-items: center;
   padding-top: var(--space-xl);
-  flex-wrap: wrap;
   gap: var(--space-md);
 }
 
 .footer__copyright {
+  flex: 1;
   font-size: var(--text-xs);
   color: var(--color-gray-light);
+  text-align: left;
 }
 
-.footer__right {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
+.footer__credit {
+  flex: 1;
+  text-align: center;
 }
 
 .footer__legal {
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
   gap: var(--space-lg);
 }
 
@@ -1774,9 +1776,12 @@ p {
     text-align: center;
   }
   
-  .footer__right {
-    flex-direction: column;
-    gap: var(--space-sm);
+  .footer__copyright,
+  .footer__credit,
+  .footer__legal {
+    flex: none;
+    text-align: center;
+    justify-content: center;
   }
   
   .form__row {
