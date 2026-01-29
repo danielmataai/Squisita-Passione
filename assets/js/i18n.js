@@ -80,6 +80,13 @@ const translations = {
     'testimonials.eyebrow': '5 Stars Only',
     'testimonials.title': 'What People Say About Chef Davide',
     'testimonials.subtitle': 'Around the World',
+    'testimonials.1': '"My husband and I did the pasta making with wine pairing class with chef Davide and sommelier Georgia. We truly had a wonderful experience. The hands on pasta making experience was very helpful. The food and wine pairings were both delicious! The team was professional and well educated but also created a very fun environment."',
+    'testimonials.2': '"Wow! What an incredible experience! I thought it would be boring, but this class was so much fun! Davide was a great instructor and a very funny guy. He made the experience interesting and was engaging with his audience. My husband ended up having a blast. I highly recommend this class for a fun, unique, and interactive experience."',
+    'testimonials.3': '"Before I retired, I was a university professor of education in curriculum and instruction. Basically, I taught already certified teachers how to think about and improve their practice of teaching. In my class Davide would have been an A student. He is extremely good at what he does!"',
+    'testimonials.4': '"This pasta making class with Chef Davide is an amazing experience. It was recommended to us by our friends, and we\'ll be recommending it to everyone else. Learn to make 4 styles of pasta. The \'Pasta Whisperer\' will show you how to save your pasta from any of your kitchen missteps. A lot of fun with wine and essentially dinner as well."',
+    'testimonials.5': '"It was a great experience and we had a lot of fun! Chef Davide was amazing: he taught us techniques, made us participate so the ambiance was very nice because it made us feel like you\'re cooking with your friends or family. He\'s funny so he made this cooking class entertaining! The food was delicious. I really recommend the experience!"',
+    'testimonials.6': '"This class was amazing! Davide was excellent! He was super nice and extremely talented! It was so fun and covered so many things! He made the class special! I definitely recommend!!!"',
+    'testimonials.7': '"Merci pour la belle expérience avec les enfants au Time Out Market. Nous avons été accueillis par une équipe sympathique. Le chef est attentionné et aime les enfants. Il les fait participer dans le plaisir. Vraiment agréable."',
     
     // Contact
     'contact.eyebrow': 'Get in Touch',
@@ -239,6 +246,13 @@ const translations = {
     'testimonials.eyebrow': '5 Étoiles Seulement',
     'testimonials.title': 'Ce Que Les Gens Disent du Chef Davide',
     'testimonials.subtitle': 'À Travers le Monde',
+    'testimonials.1': '"Mon mari et moi avons suivi le cours de fabrication de pâtes avec accord mets-vins avec le chef Davide et la sommelière Georgia. Nous avons vraiment vécu une expérience merveilleuse. L\'expérience pratique de fabrication de pâtes était très utile. Les accords mets-vins étaient délicieux! L\'équipe était professionnelle et bien formée, mais a aussi créé un environnement très amusant."',
+    'testimonials.2': '"Wow! Quelle expérience incroyable! Je pensais que ce serait ennuyeux, mais ce cours était tellement amusant! Davide était un excellent instructeur et un homme très drôle. Il a rendu l\'expérience intéressante et captivait son public. Mon mari s\'est éclaté. Je recommande vivement ce cours pour une expérience amusante, unique et interactive."',
+    'testimonials.3': '"Avant ma retraite, j\'étais professeur universitaire en éducation, spécialisé en curriculum et pédagogie. En gros, j\'enseignais aux enseignants certifiés comment améliorer leur pratique. Dans mon cours, Davide aurait été un étudiant A. Il est extrêmement bon dans ce qu\'il fait!"',
+    'testimonials.4': '"Ce cours de fabrication de pâtes avec le Chef Davide est une expérience incroyable. Nos amis nous l\'ont recommandé, et nous le recommanderons à tout le monde. Apprenez à faire 4 styles de pâtes. Le \'Chuchoteur de Pâtes\' vous montrera comment sauver vos pâtes de vos erreurs en cuisine. Beaucoup de plaisir avec du vin et essentiellement un dîner aussi."',
+    'testimonials.5': '"C\'était une super expérience et on s\'est bien amusés! Le Chef Davide était incroyable: il nous a appris des techniques, nous a fait participer donc l\'ambiance était très agréable car on avait l\'impression de cuisiner avec des amis ou de la famille. Il est drôle donc il a rendu ce cours de cuisine divertissant! La nourriture était délicieuse. Je recommande vraiment l\'expérience!"',
+    'testimonials.6': '"Ce cours était incroyable! Davide était excellent! Il était super gentil et extrêmement talentueux! C\'était tellement amusant et couvrait tellement de choses! Il a rendu le cours spécial! Je recommande absolument!!!"',
+    'testimonials.7': '"Merci pour la belle expérience avec les enfants au Time Out Market. Nous avons été accueillis par une équipe sympathique. Le chef est attentionné et aime les enfants. Il les fait participer dans le plaisir. Vraiment agréable."',
     
     // Contact
     'contact.eyebrow': 'Contactez-nous',
