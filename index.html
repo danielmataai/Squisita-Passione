@@ -808,6 +808,38 @@
     </div>
   </footer>
 
+  <!-- Availability Float Widget -->
+  <div class="availability-widget">
+    <button class="availability-widget__btn" id="availabilityBtn" aria-label="View availability">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    </button>
+    <div class="availability-widget__popup" id="availabilityPopup">
+      <div class="availability-widget__header">
+        <h3 data-i18n="availability.title">Where to Find Me</h3>
+        <button class="availability-widget__close" id="availabilityClose" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="availability-widget__content">
+        <div class="availability-widget__item">
+          <span class="availability-widget__flag">🇨🇦</span>
+          <div class="availability-widget__info">
+            <span class="availability-widget__country" data-i18n="availability.canada">Canada</span>
+            <span class="availability-widget__dates" data-i18n="availability.canada.dates">February & March 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
@@ -861,6 +893,26 @@
       if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowLeft') navigate(-1);
       if (e.key === 'ArrowRight') navigate(1);
+    });
+    
+    // Availability Widget
+    const availabilityBtn = document.getElementById('availabilityBtn');
+    const availabilityPopup = document.getElementById('availabilityPopup');
+    const availabilityClose = document.getElementById('availabilityClose');
+    
+    availabilityBtn.addEventListener('click', () => {
+      availabilityPopup.classList.toggle('active');
+    });
+    
+    availabilityClose.addEventListener('click', () => {
+      availabilityPopup.classList.remove('active');
+    });
+    
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.availability-widget')) {
+        availabilityPopup.classList.remove('active');
+      }
     });
   </script>
 </body>

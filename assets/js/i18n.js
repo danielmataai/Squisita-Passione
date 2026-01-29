@@ -88,6 +88,11 @@ const translations = {
     'testimonials.6': '"This class was amazing! Davide was excellent! He was super nice and extremely talented! It was so fun and covered so many things! He made the class special! I definitely recommend!!!"',
     'testimonials.7': '"Merci pour la belle expérience avec les enfants au Time Out Market. Nous avons été accueillis par une équipe sympathique. Le chef est attentionné et aime les enfants. Il les fait participer dans le plaisir. Vraiment agréable."',
     
+    // Availability
+    'availability.title': 'Where to Find Me',
+    'availability.canada': 'Canada',
+    'availability.canada.dates': 'February & March 2026',
+    
     // Contact
     'contact.eyebrow': 'Get in Touch',
     'contact.title': 'Let\'s Create Something Delicious',
@@ -253,6 +258,11 @@ const translations = {
     'testimonials.5': '"C\'était une super expérience et on s\'est bien amusés! Le Chef Davide était incroyable: il nous a appris des techniques, nous a fait participer donc l\'ambiance était très agréable car on avait l\'impression de cuisiner avec des amis ou de la famille. Il est drôle donc il a rendu ce cours de cuisine divertissant! La nourriture était délicieuse. Je recommande vraiment l\'expérience!"',
     'testimonials.6': '"Ce cours était incroyable! Davide était excellent! Il était super gentil et extrêmement talentueux! C\'était tellement amusant et couvrait tellement de choses! Il a rendu le cours spécial! Je recommande absolument!!!"',
     'testimonials.7': '"Merci pour la belle expérience avec les enfants au Time Out Market. Nous avons été accueillis par une équipe sympathique. Le chef est attentionné et aime les enfants. Il les fait participer dans le plaisir. Vraiment agréable."',
+    
+    // Availability
+    'availability.title': 'Où Me Trouver',
+    'availability.canada': 'Canada',
+    'availability.canada.dates': 'Février & Mars 2026',
     
     // Contact
     'contact.eyebrow': 'Contactez-nous',
