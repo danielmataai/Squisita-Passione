@@ -804,12 +804,16 @@ p {
 
 .service-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: var(--transition-elegant);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .service-card:hover {
