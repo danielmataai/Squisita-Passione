@@ -169,6 +169,26 @@
   color: #E07A7A;
 }
 
+.theme-card--link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.theme-card--link:hover {
+  border-left-color: var(--color-tomato-dark);
+}
+
+.theme-card--link h4::after {
+  content: ' →';
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.theme-card--link:hover h4::after {
+  opacity: 1;
+}
+
 .theme-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
