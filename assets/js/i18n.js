@@ -41,7 +41,7 @@ const translations = {
     'services.private.location': 'Canada',
     
     'services.tours.badge': 'Adventure',
-    'services.tours.title': 'Italian Gastronomy Tours',
+    'services.tours.title': 'Informal Gastronomic Tours',
     'services.tours.description': 'Informal culinary adventures through Italy\'s finest food destinations. Discover hidden gems, meet local artisans, and taste authentic regional flavors.',
     'services.tours.duration': 'Multi-day',
     'services.tours.location': 'Tuscany & more',
@@ -215,7 +215,7 @@ const translations = {
     'services.private.location': 'Canada',
     
     'services.tours.badge': 'Aventure',
-    'services.tours.title': 'Tours Gastronomiques en Italie',
+    'services.tours.title': 'Tours Gastronomiques Informels',
     'services.tours.description': 'Des aventures culinaires informelles à travers les meilleures destinations gastronomiques d\'Italie. Découvrez des trésors cachés, rencontrez des artisans locaux et goûtez aux saveurs régionales authentiques.',
     'services.tours.duration': 'Plusieurs jours',
     'services.tours.location': 'Toscane et plus',
