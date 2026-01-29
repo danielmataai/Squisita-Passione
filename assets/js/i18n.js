@@ -76,6 +76,11 @@ const translations = {
     'cta.text': 'Whether you\'re looking for a cooking workshop, a private dining experience, or an unforgettable tour through Italy, let\'s create something special together.',
     'cta.button': 'Request a Quote',
     
+    // Testimonials
+    'testimonials.eyebrow': '5 Stars Only',
+    'testimonials.title': 'What People Say About Chef Davide',
+    'testimonials.subtitle': 'Around the World',
+    
     // Contact
     'contact.eyebrow': 'Get in Touch',
     'contact.title': 'Let\'s Create Something Delicious',
@@ -229,6 +234,11 @@ const translations = {
     'cta.title': 'Prêt à Découvrir la Cuisine Italienne?',
     'cta.text': 'Que vous recherchiez un atelier de cuisine, une expérience de dîner privé ou un tour inoubliable à travers l\'Italie, créons ensemble quelque chose de spécial.',
     'cta.button': 'Demander un Devis',
+    
+    // Testimonials
+    'testimonials.eyebrow': '5 Étoiles Seulement',
+    'testimonials.title': 'Ce Que Les Gens Disent du Chef Davide',
+    'testimonials.subtitle': 'À Travers le Monde',
     
     // Contact
     'contact.eyebrow': 'Contactez-nous',
