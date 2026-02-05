@@ -62,6 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (isMenuOpen && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      toggleMenu();
+    }
+  });
+
   // ==================== PASSIONE MODE ON SCROLL BACK ====================
   const heroSection = document.getElementById('hero');
   let hasScrolledPastHero = false;
