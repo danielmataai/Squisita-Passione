@@ -892,6 +892,19 @@
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
+    // Randomize gallery order on each page load
+    (function() {
+      const scroll = document.querySelector('.gallery__scroll');
+      if (!scroll) return;
+      const items = Array.from(scroll.children);
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        scroll.appendChild(items[j]);
+        items[j] = items[i];
+      }
+    })();
+  </script>
+  <script>
     // Gallery Lightbox
     const lightbox = document.getElementById('galleryLightbox');
     const lightboxImage = document.getElementById('lightboxImage');
