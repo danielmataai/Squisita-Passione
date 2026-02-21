@@ -95,6 +95,8 @@ const translations = {
     'availability.title': 'Where to Find Me',
     'availability.canada': 'Canada',
     'availability.canada.dates': 'February & March 2026',
+    'availability.italy': 'Italy',
+    'availability.italy.dates': 'September 2026',
     
     // Contact
     'contact.eyebrow': 'Get in Touch',
@@ -394,6 +396,8 @@ const translations = {
     'availability.title': 'Où Me Trouver',
     'availability.canada': 'Canada',
     'availability.canada.dates': 'Février & Mars 2026',
+    'availability.italy': 'Italie',
+    'availability.italy.dates': 'Septembre 2026',
     
     // Contact
     'contact.eyebrow': 'Contactez-nous',
