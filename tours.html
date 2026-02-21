@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Informal Gastronomic Tours by Chef Davide Rizzardi - 7 days of culinary adventures through Florence and Tuscany. Discover hidden gems, meet local artisans, and taste authentic Italian flavors.">
+  <meta name="description" content="Informal Gastronomic Tours by Chef Davide Rizzardi - Choose from our full 7-day Tuscan experience, activities-only package, or single day experiences in Florence and Tuscany.">
   
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
@@ -52,6 +52,17 @@
     </div>
   </header>
 
+  <!-- Sticky Tour Nav -->
+  <div class="tour-sticky-nav" id="tourStickyNav">
+    <div class="tour-sticky-nav__bar" id="tourStickyBar">
+      <span class="tour-sticky-nav__badge" id="tourStickyBadge"></span>
+      <span class="tour-sticky-nav__title" id="tourStickyTitle"></span>
+      <span class="tour-sticky-nav__divider"></span>
+      <span class="tour-sticky-nav__dates" id="tourStickyDates"></span>
+    </div>
+  </div>
+
+  <div class="page-content-wrapper">
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero__background">
@@ -59,18 +70,96 @@
     </div>
     <div class="page-hero__overlay"></div>
     <div class="page-hero__content">
-      <p class="page-hero__eyebrow" data-i18n="tours.page.hero.eyebrow">7 Days in Tuscany</p>
+      <p class="page-hero__eyebrow" data-i18n="tours.page.hero.eyebrow">Discover Tuscany</p>
       <h1 class="page-hero__title" data-i18n="tours.page.hero.title">Informal Gastronomic Tours</h1>
-      <p class="page-hero__description" data-i18n="tours.page.hero.description">A week of culinary adventures through the heart of Florence and Tuscany</p>
+      <p class="page-hero__description" data-i18n="tours.page.hero.description">Choose your perfect Italian culinary adventure, from a full week to a single day</p>
     </div>
   </section>
 
-  <!-- Tour Intro -->
+  <!-- Tour Selection Cards -->
   <section class="section">
     <div class="container">
+      <div class="section-header reveal" style="text-align:center; margin-bottom: var(--space-2xl);">
+        <p class="section-header__eyebrow" data-i18n="tours.page.choose.eyebrow" style="font-family: var(--font-accent); font-style: italic; color: var(--color-tomato); font-size: var(--text-lg); margin-bottom: var(--space-sm);">Your Adventure, Your Way</p>
+        <h2 data-i18n="tours.page.choose.title" style="font-family: var(--font-display); font-size: var(--text-4xl); font-weight: 400; color: var(--color-black);">Choose Your Experience</h2>
+      </div>
+      <div class="tour-intro reveal">
+        <p data-i18n="tours.page.intro.main">Chef Davide offers three ways to experience the authentic flavors of Tuscany. Whether you want the complete immersion, the culinary experiences without accommodation, or just a taste of a single day. There's a perfect option for you.</p>
+      </div>
+
+      <div class="tour-selector">
+        
+        <!-- Tour 1 Card -->
+        <a href="#tour1" class="tour-selector__card tour-selector__card--featured reveal">
+          <div class="tour-selector__header">
+            <div class="tour-selector__badge" data-i18n="tours.page.selector.badge1">Complete Package</div>
+            <h3 class="tour-selector__header-title" data-i18n="tours.page.selector.title1">The Full Tuscan Experience</h3>
+            <p class="tour-selector__dates">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span data-i18n="tours.page.selector.dates1">September 1 – 7, 2026</span>
+            </p>
+          </div>
+          <div class="tour-selector__body">
+            <p class="tour-selector__desc" data-i18n="tours.page.selector.desc1">7 days of culinary adventures with accommodation, all meals, activities, and transportation included.</p>
+            <span class="tour-selector__link" data-i18n="tours.page.selector.cta1">View Full Itinerary</span>
+          </div>
+        </a>
+
+        <!-- Tour 2 Card -->
+        <a href="#tour2" class="tour-selector__card tour-selector__card--alt reveal">
+          <div class="tour-selector__header">
+            <div class="tour-selector__badge" data-i18n="tours.page.selector.badge2">Activities Only</div>
+            <h3 class="tour-selector__header-title" data-i18n="tours.page.selector.title2">Activities & Experiences</h3>
+            <p class="tour-selector__dates">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span data-i18n="tours.page.selector.dates2">September 1 – 7, 2026</span>
+            </p>
+          </div>
+          <div class="tour-selector__body">
+            <p class="tour-selector__desc" data-i18n="tours.page.selector.desc2">All the same culinary experiences and activities. Arrange your own accommodation in Florence.</p>
+            <span class="tour-selector__link" data-i18n="tours.page.selector.cta2">View Activities</span>
+          </div>
+        </a>
+
+        <!-- Tour 3 Card -->
+        <a href="#tour3" class="tour-selector__card reveal">
+          <div class="tour-selector__header">
+            <div class="tour-selector__badge" data-i18n="tours.page.selector.badge3">Single Day</div>
+            <h3 class="tour-selector__header-title" data-i18n="tours.page.selector.title3">Day Experience</h3>
+            <p class="tour-selector__dates">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span data-i18n="tours.page.selector.dates3">Flexible dates</span>
+            </p>
+          </div>
+          <div class="tour-selector__body">
+            <p class="tour-selector__desc" data-i18n="tours.page.selector.desc3">Pick a single day experience from our curated Tuscan adventures. Perfect for a taste of the Italian food culture.</p>
+            <span class="tour-selector__link" data-i18n="tours.page.selector.cta3">Explore Days</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TOUR 1: THE FULL TUSCAN EXPERIENCE -->
+  <!-- ============================================================ -->
+  <div id="tour1">
+  <section class="section">
+    <div class="container">
+      <div class="tour-section-header reveal">
+        <span class="tour-section-header__label" data-i18n="tours.page.selector.badge1">Complete Package</span>
+        <h2 class="tour-section-header__title" data-i18n="tours.page.t1.title">The Full Tuscan Experience</h2>
+        <p class="tour-section-header__dates">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span data-i18n="tours.page.selector.dates1">September 1 – 7, 2026</span>
+        </p>
+        <p class="tour-section-header__desc" data-i18n="tours.page.t1.desc">A complete week of culinary adventures through the heart of Florence and Tuscany. Accommodation, all meals, activities, and transportation included.</p>
+      </div>
+
       <div class="tour-intro reveal">
         <p data-i18n="tours.page.intro.p1">Starting at the vibrant Mercato di Sant'Ambrogio, you'll taste some of Italy's most authentic artisanal cheeses and charcuterie, meeting the flavors and stories behind each bite.</p>
-        <p data-i18n="tours.page.intro.p2">From horseback riding through the rolling Tuscan countryside, to sipping natural Italian wines in the heart of Florence, to mastering the art of the perfect aperitivo cocktail alongside a professional bartender — Chef Davide will guide you through his passion, rooted deeply in his own country.</p>
+        <p data-i18n="tours.page.intro.p2">From horseback riding through the rolling Tuscan countryside, to sipping natural Italian wines in the heart of Florence, to mastering the art of the perfect aperitivo cocktail alongside a professional bartender, Chef Davide will guide you through his passion, rooted deeply in his own country.</p>
         <p data-i18n="tours.page.intro.p3">Your week will be filled with relaxed moments, genuine connections, unforgettable food, and experiences that turn into lifelong memories.</p>
       </div>
 
@@ -133,7 +222,7 @@
           <div class="tour-day__content">
             <p class="tour-day__eyebrow" data-i18n="tours.page.day3.eyebrow">A Typical Chef Davide Day</p>
             <h3 class="tour-day__title" data-i18n="tours.page.day3.title">Fiesole & Trattoria Sabatino</h3>
-            <p class="tour-day__text" data-i18n="tours.page.day3.text">This day will be dedicated to living a day like Chef Davide. Starting with a nice espresso and a traditional sweet at the Pasticceria Alcedo, we will discover Florence's oldest settlement, Fiesole — a hilltop town with breathtaking views. For dinner, Chef Davide will bring you to his favorite Trattoria in town. Let him show you how to eat like a local.</p>
+            <p class="tour-day__text" data-i18n="tours.page.day3.text">This day will be dedicated to living a day like Chef Davide. Starting with a nice espresso and a traditional sweet at the Pasticceria Alcedo, we will discover Florence's oldest settlement, Fiesole, a hilltop town with breathtaking views. For dinner, Chef Davide will bring you to his favorite Trattoria in town. Let him show you how to eat like a local.</p>
             <div class="tour-day__schedule">
               <div class="tour-day__time">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -248,7 +337,7 @@
           <div class="tour-day__content">
             <p class="tour-day__eyebrow" data-i18n="tours.page.day7.eyebrow">The Gran Finale</p>
             <h3 class="tour-day__title" data-i18n="tours.page.day7.title">Aperitivo Class & Chef Davide's Final Dinner</h3>
-            <p class="tour-day__text" data-i18n="tours.page.day7.text">The grand finale. Accompanied by Master Bartender Luca, we will learn how to mix the perfect ingredients for a real Italian aperitivo cocktail. For dinner, Chef Davide will delight you with a traditional Italian 4-course meal — a surprise farewell feast to close an unforgettable week.</p>
+            <p class="tour-day__text" data-i18n="tours.page.day7.text">The grand finale. Accompanied by Master Bartender Luca, we will learn how to mix the perfect ingredients for a real Italian aperitivo cocktail. For dinner, Chef Davide will delight you with a traditional Italian 4-course meal, a surprise farewell feast to close an unforgettable week.</p>
             <div class="tour-day__schedule">
               <div class="tour-day__time">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -266,7 +355,7 @@
     </div>
   </section>
 
-  <!-- What's Included & Booking -->
+  <!-- Tour 1: What's Included & Booking -->
   <section class="section section--beige">
     <div class="container">
       
@@ -393,7 +482,244 @@
         </div>
       </div>
 
-      <!-- FAQ -->
+      <!-- CTA for Tour 1 -->
+      <div class="tour-whatsapp-cta tour-whatsapp-cta--centered reveal">
+        <h3 data-i18n="tours.page.t1.cta.title">Ready to Book the Full Experience?</h3>
+        <p data-i18n="tours.page.t1.cta.text">Send Chef Davide a message to reserve your spot for the complete Tuscan adventure.</p>
+        <a href="https://wa.me/15149839297?text=Hi%20Chef%20Davide!%20I'm%20interested%20in%20booking%20The%20Full%20Tuscan%20Experience%20(7-day%20complete%20package).%20Could%20you%20share%20more%20details?" target="_blank" rel="noopener" class="btn-whatsapp btn-whatsapp--large">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="tours.page.t1.cta.button">Book via WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  </div><!-- /#tour1 -->
+
+  <!-- ============================================================ -->
+  <!-- TOUR 2: ACTIVITIES & EXPERIENCES ONLY -->
+  <!-- ============================================================ -->
+  <section class="section" id="tour2">
+    <div class="container">
+      <div class="tour-section-header reveal">
+        <span class="tour-section-header__label tour-section-header__label--alt" data-i18n="tours.page.selector.badge2">Activities Only</span>
+        <h2 class="tour-section-header__title" data-i18n="tours.page.t2.title">Activities & Experiences</h2>
+        <p class="tour-section-header__dates">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span data-i18n="tours.page.selector.dates2">September 1 – 7, 2026</span>
+        </p>
+        <p class="tour-section-header__desc" data-i18n="tours.page.t2.desc">All the same incredible culinary experiences from Tour 1, without accommodation. Perfect if you already have your own place to stay in Florence or prefer to arrange your own lodging.</p>
+      </div>
+
+      <!-- Activities List -->
+      <div class="tour-activities reveal">
+        <div class="tour-activity">
+          <div class="tour-activity__day">Day 1</div>
+          <div class="tour-activity__content">
+            <h4 data-i18n="tours.page.day1.title">Mercato Sant'Ambrogio & Pasta Class</h4>
+            <p data-i18n="tours.page.day1.text">Stefano is a master selector of cheese and charcuterie. We will start our tour with a beautiful tasting of refined Italian products and wine, plus Chef Davide will bring you around the market to buy some of his favourite Italian delicacies. In the afternoon, we are going to learn how to make 3 fresh pasta and 3 sauces in the heart of Florence with unlimited Tuscan wine.</p>
+          </div>
+        </div>
+        <div class="tour-activity">
+          <div class="tour-activity__day">Day 2</div>
+          <div class="tour-activity__content">
+            <h4 data-i18n="tours.page.day2.title">Chianti Wine Tour</h4>
+            <p data-i18n="tours.page.day2.text">Starting in the morning we will discover the beauty of the Chianti region with Sommelier Matteo. We'll visit 2 stunning wineries, explore the rolling hills of Chianti, and finish the day with a great traditional lunch surrounded by vineyards.</p>
+          </div>
+        </div>
+        <div class="tour-activity">
+          <div class="tour-activity__day">Day 3</div>
+          <div class="tour-activity__content">
+            <h4 data-i18n="tours.page.day3.title">Fiesole & Trattoria Sabatino</h4>
+            <p data-i18n="tours.page.day3.text">This day will be dedicated to living a day like Chef Davide. Starting with a nice espresso and a traditional sweet at the Pasticceria Alcedo, we will discover Florence's oldest settlement, Fiesole, a hilltop town with breathtaking views. For dinner, Chef Davide will bring you to his favorite Trattoria in town. Let him show you how to eat like a local.</p>
+          </div>
+        </div>
+        <div class="tour-activity">
+          <div class="tour-activity__day">Day 4</div>
+          <div class="tour-activity__content">
+            <h4 data-i18n="tours.page.day4.title">Italian Street Food Day</h4>
+            <p data-i18n="tours.page.day4.text">During this day Chef Davide will bring you to taste Florence's old traditional street food, but also make you discover a hidden gem where chef friend Tommaso creates savory tacos with Tuscan products. As an option you can choose to have an Aperitivo with natural wine at Vineria Sonora, an amazing wine bar with more than 2,000 different wines from all over Italy.</p>
+          </div>
+        </div>
+        <div class="tour-activity">
+          <div class="tour-activity__day">Day 5</div>
+          <div class="tour-activity__content">
+            <h4 data-i18n="tours.page.day5.title">Tuscan Butchery Day</h4>
+            <p data-i18n="tours.page.day5.text">Tuscany's butchery tradition is known worldwide. Let Chef Davide take you to discover this amazing tradition. We will start visiting one of the oldest butcheries in Tuscany, the famous Macelleria Cecchini, where we will have an amazing aperitivo. In the afternoon, we will be accompanied by Master Butcher Felipe to learn how to cut a beautiful Florentine steak. We will cook it together and enjoy it in a beautiful location.</p>
+          </div>
+        </div>
+        <div class="tour-activity">
+          <div class="tour-activity__day">Day 6</div>
+          <div class="tour-activity__content">
+            <h4 data-i18n="tours.page.day6.title">Horseback Riding & Lunch in a Casale</h4>
+            <p data-i18n="tours.page.day6.text">This day will be dedicated to the beauty of the Tuscan hills. We will have the choice to discover it by horseback riding or e-bikes, taking in the breathtaking landscapes that make this region legendary. We will have lunch in a Tuscan Agriturismo, surrounded by olive groves and vineyards.</p>
+          </div>
+        </div>
+        <div class="tour-activity">
+          <div class="tour-activity__day">Day 7</div>
+          <div class="tour-activity__content">
+            <h4 data-i18n="tours.page.day7.title">Aperitivo Class & Chef Davide's Final Dinner</h4>
+            <p data-i18n="tours.page.day7.text">The grand finale. Accompanied by Master Bartender Luca, we will learn how to mix the perfect ingredients for a real Italian aperitivo cocktail. For dinner, Chef Davide will delight you with a traditional Italian 4-course meal, a surprise farewell feast to close an unforgettable week.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What's Included Tour 2 -->
+      <div class="tour-info reveal" style="margin-top: var(--space-3xl);">
+        <h3 data-i18n="tours.page.t2.included.title">What's Included</h3>
+        <p data-i18n="tours.page.t2.included.subtitle">Everything from the full experience, minus the accommodation.</p>
+        <div class="tour-includes">
+          <div class="tour-includes__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <span data-i18n="tours.page.included.i1">All culinary experiences & activities</span>
+          </div>
+          <div class="tour-includes__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <span data-i18n="tours.page.included.i3">All meals & food tastings</span>
+          </div>
+          <div class="tour-includes__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <span data-i18n="tours.page.included.i4">Transportation outside Florence</span>
+          </div>
+          <div class="tour-includes__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <span data-i18n="tours.page.included.i5">Horseback riding or e-bike tour</span>
+          </div>
+          <div class="tour-includes__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <span data-i18n="tours.page.included.i6">Pasta class in Florence</span>
+          </div>
+          <div class="tour-includes__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <span data-i18n="tours.page.included.i7">Chianti wine tour (full day)</span>
+          </div>
+          <div class="tour-includes__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <span data-i18n="tours.page.included.i8">Aperitivo cocktail masterclass</span>
+          </div>
+          <div class="tour-includes__item tour-includes__item--excluded">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            <span data-i18n="tours.page.t2.excluded">Accommodation not included, arrange your own stay</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA for Tour 2 -->
+      <div class="tour-whatsapp-cta tour-whatsapp-cta--centered reveal">
+        <h3 data-i18n="tours.page.t2.cta.title">Interested in the Activities Package?</h3>
+        <p data-i18n="tours.page.t2.cta.text">Contact Chef Davide directly for pricing and availability.</p>
+        <a href="https://wa.me/15149839297?text=Hi%20Chef%20Davide!%20I'm%20interested%20in%20the%20Activities%20%26%20Experiences%20tour%20package%20(without%20accommodation).%20Could%20you%20share%20more%20details?" target="_blank" rel="noopener" class="btn-whatsapp btn-whatsapp--large">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="tours.page.t2.cta.button">Message on WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TOUR 3: DAY EXPERIENCE -->
+  <!-- ============================================================ -->
+  <section class="section section--beige" id="tour3">
+    <div class="container">
+      <div class="tour-section-header reveal">
+        <span class="tour-section-header__label tour-section-header__label--dark" data-i18n="tours.page.selector.badge3">Single Day</span>
+        <h2 class="tour-section-header__title" data-i18n="tours.page.t3.title">Day Experience</h2>
+        <p class="tour-section-header__desc" data-i18n="tours.page.t3.desc">Not ready for a full week? Pick a single day experience from our curated Tuscan adventures. Each day can be booked individually, perfect for travelers who want a taste of the authentic Italian food culture during their stay in Florence.</p>
+      </div>
+
+      <!-- Day Experience Options -->
+      <div class="day-experiences reveal">
+        
+        <div class="day-exp">
+          <div class="day-exp__image">
+            <img src="assets/images/firenzetour.jpg" alt="Mercato Sant'Ambrogio & Pasta Class">
+          </div>
+          <div class="day-exp__content">
+            <h4 data-i18n="tours.page.day1.title">Mercato Sant'Ambrogio & Pasta Class</h4>
+            <p class="day-exp__detail" data-i18n="tours.page.t3.day1.short">Market tour with artisanal tasting, followed by a hands-on pasta class with unlimited Tuscan wine.</p>
+          </div>
+        </div>
+
+        <div class="day-exp">
+          <div class="day-exp__image">
+            <img src="assets/images/tours/day2-vino.webp" alt="Chianti Wine Tour">
+          </div>
+          <div class="day-exp__content">
+            <h4 data-i18n="tours.page.day2.title">Chianti Wine Tour</h4>
+            <p class="day-exp__detail" data-i18n="tours.page.t3.day2.short">Full day exploring the Chianti region. 2 wineries, rolling hills, and a traditional Tuscan lunch.</p>
+          </div>
+        </div>
+
+        <div class="day-exp">
+          <div class="day-exp__image">
+            <img src="assets/images/tours/day3-fiesole.jpg" alt="Fiesole & Trattoria Sabatino">
+          </div>
+          <div class="day-exp__content">
+            <h4 data-i18n="tours.page.day3.title">Fiesole & Trattoria Sabatino</h4>
+            <p class="day-exp__detail" data-i18n="tours.page.t3.day3.short">Live like a local. Pastries in the hills of Fiesole, historic walk, and dinner at Chef Davide's favorite trattoria.</p>
+          </div>
+        </div>
+
+        <div class="day-exp">
+          <div class="day-exp__image">
+            <img src="assets/images/tours/day4-toscotaco.jpeg" alt="Italian Street Food Day">
+          </div>
+          <div class="day-exp__content">
+            <h4 data-i18n="tours.page.day4.title">Italian Street Food Day</h4>
+            <p class="day-exp__detail" data-i18n="tours.page.t3.day4.short">Florence's best street food, from traditional lampredotto to Tuscan tacos, gelato, and an optional natural wine aperitivo.</p>
+          </div>
+        </div>
+
+        <div class="day-exp">
+          <div class="day-exp__image">
+            <img src="assets/images/firenzetour.jpg" alt="Tuscan Butchery Day">
+          </div>
+          <div class="day-exp__content">
+            <h4 data-i18n="tours.page.day5.title">Tuscan Butchery Day</h4>
+            <p class="day-exp__detail" data-i18n="tours.page.t3.day5.short">Visit the legendary Macelleria Cecchini and learn to cut a Florentine steak with a master butcher.</p>
+          </div>
+        </div>
+
+        <div class="day-exp">
+          <div class="day-exp__image">
+            <img src="assets/images/tours/day6-horseback.jpg" alt="Horseback Riding & Lunch in a Casale">
+          </div>
+          <div class="day-exp__content">
+            <h4 data-i18n="tours.page.day6.title">Horseback Riding & Lunch in a Casale</h4>
+            <p class="day-exp__detail" data-i18n="tours.page.t3.day6.short">Horseback riding or e-bikes through the Tuscan countryside, followed by lunch at a beautiful Agriturismo.</p>
+          </div>
+        </div>
+
+        <div class="day-exp">
+          <div class="day-exp__image">
+            <img src="assets/images/tours/day7-aperitivo.jpeg" alt="Aperitivo Class & Chef's Dinner">
+          </div>
+          <div class="day-exp__content">
+            <h4 data-i18n="tours.page.day7.title">Aperitivo Class & Chef Davide's Final Dinner</h4>
+            <p class="day-exp__detail" data-i18n="tours.page.t3.day7.short">Learn to mix the perfect Italian aperitivo, then enjoy a 4-course meal prepared by Chef Davide.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- WhatsApp CTA for Tour 3 -->
+      <div class="tour-whatsapp-cta tour-whatsapp-cta--centered reveal">
+        <h3 data-i18n="tours.page.t3.cta.title">Interested in a Day Experience?</h3>
+        <p data-i18n="tours.page.t3.cta.text">Send Chef Davide a message to check availability, pricing, and to book your perfect day in Tuscany.</p>
+        <a href="https://wa.me/15149839297?text=Hi%20Chef%20Davide!%20I'm%20interested%20in%20booking%20a%20single%20Day%20Experience%20in%20Tuscany.%20Could%20you%20share%20more%20details?" target="_blank" rel="noopener" class="btn-whatsapp btn-whatsapp--large">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="tours.page.t3.cta.button">Book via WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
       <div class="tour-info reveal">
         <h3 data-i18n="tours.page.faq.title">Frequently Asked Questions</h3>
         <div class="faq">
@@ -453,7 +779,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -462,11 +787,13 @@
     <div class="container">
       <div class="cta__content reveal">
         <h2 class="cta__title" data-i18n="tours.page.cta.title">Ready for a Culinary Adventure?</h2>
-        <p class="cta__text" data-i18n="tours.page.cta.text">Let's plan your perfect Italian food journey. Contact Chef Davide to start designing your unforgettable week in Tuscany.</p>
+        <p class="cta__text" data-i18n="tours.page.cta.text">Let's plan your perfect Italian food journey. Contact Chef Davide to start designing your unforgettable experience in Tuscany.</p>
         <a href="index.html#contact" class="btn btn--white" data-i18n="tours.page.cta.button">Reserve Your Spot</a>
       </div>
     </div>
   </section>
+
+  </div><!-- /.page-content-wrapper -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -530,6 +857,118 @@
         }
       });
     });
+
+    // Smooth scroll for tour selector cards
+    document.querySelectorAll('.tour-selector__card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(card.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Sticky Tour Nav
+    (function() {
+      const stickyNav = document.getElementById('tourStickyNav');
+      const stickyBar = document.getElementById('tourStickyBar');
+      const stickyBadge = document.getElementById('tourStickyBadge');
+      const stickyTitle = document.getElementById('tourStickyTitle');
+      const stickyDates = document.getElementById('tourStickyDates');
+
+      const sections = [
+        {
+          id: 'tour1',
+          barClass: 'tour-sticky-nav__bar--tour1',
+          badge: { en: 'Complete Package', fr: 'Forfait Complet' },
+          title: { en: 'The Full Tuscan Experience', fr: "L'Exp\u00e9rience Toscane Compl\u00e8te" },
+          dates: { en: 'September 1 \u2013 7, 2026', fr: '1 \u2013 7 Septembre 2026' }
+        },
+        {
+          id: 'tour2',
+          barClass: 'tour-sticky-nav__bar--tour2',
+          badge: { en: 'Activities Only', fr: 'Activit\u00e9s Seulement' },
+          title: { en: 'Activities & Experiences', fr: 'Activit\u00e9s et Exp\u00e9riences' },
+          dates: { en: 'September 1 \u2013 7, 2026', fr: '1 \u2013 7 Septembre 2026' }
+        },
+        {
+          id: 'tour3',
+          barClass: 'tour-sticky-nav__bar--tour3',
+          badge: { en: 'Single Day', fr: 'Journ\u00e9e Unique' },
+          title: { en: 'Day Experience', fr: "Exp\u00e9rience d'une Journ\u00e9e" },
+          dates: { en: 'Flexible dates', fr: 'Dates flexibles' }
+        }
+      ];
+
+      let currentSection = null;
+
+      function getLang() {
+        return (window.i18n && window.i18n.currentLang) || 'en';
+      }
+
+      function updateStickyNav() {
+        // Position right below the header
+        const header = document.getElementById('header');
+        const headerH = header ? header.offsetHeight : 72;
+        stickyNav.style.top = headerH + 'px';
+
+        // Check which section is active using viewport position
+        let activeSection = null;
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const el = document.getElementById(sections[i].id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            // Section header must be scrolled past (top < -100 from header)
+            // and section bottom must still be below viewport top
+            if (rect.top < headerH - 100 && rect.bottom > headerH + 100) {
+              activeSection = sections[i];
+              break;
+            }
+          }
+        }
+
+        if (activeSection) {
+          if (activeSection.id !== currentSection) {
+            currentSection = activeSection.id;
+            const lang = getLang();
+            stickyBar.className = 'tour-sticky-nav__bar ' + activeSection.barClass;
+            stickyBadge.textContent = activeSection.badge[lang];
+            stickyTitle.textContent = activeSection.title[lang];
+            stickyDates.textContent = activeSection.dates[lang];
+          }
+          stickyNav.classList.add('visible');
+        } else {
+          currentSection = null;
+          stickyNav.classList.remove('visible');
+        }
+      }
+
+      // Update text on language change
+      const origSetLang = window.i18n && window.i18n.setLanguage;
+      if (origSetLang) {
+        const origBind = origSetLang.bind(window.i18n);
+        window.i18n.setLanguage = function(lang) {
+          origBind(lang);
+          currentSection = null; // force refresh
+          updateStickyNav();
+        };
+      }
+
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          requestAnimationFrame(function() {
+            updateStickyNav();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      updateStickyNav();
+    })();
   </script>
 </body>
 </html>
