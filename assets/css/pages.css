@@ -1335,19 +1335,19 @@
   height: 24px;
 }
 
-/* Excluded item style */
-.tour-includes__item--excluded {
-  background-color: rgba(209, 41, 39, 0.05);
-  border: 1px dashed rgba(209, 41, 39, 0.3);
+/* Note item style (neutral informational) */
+.tour-includes__item--note {
+  background-color: rgba(44, 62, 80, 0.06);
+  border: 1px solid rgba(44, 62, 80, 0.15);
+  grid-column: 1 / -1;
 }
 
-.tour-includes__item--excluded svg {
-  color: var(--color-gray);
+.tour-includes__item--note svg {
+  color: var(--color-charcoal);
 }
 
-.tour-includes__item--excluded span {
-  color: var(--color-gray);
-  font-style: italic;
+.tour-includes__item--note span {
+  color: var(--color-charcoal);
 }
 
 /* ==================== RESPONSIVE ==================== */
