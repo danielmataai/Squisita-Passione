@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', function() {
     setTimeout(() => {
       preloader.classList.add('preloader--hidden');
-    }, 800);
+    }, 200);
   });
 
   // ==================== HEADER SCROLL BEHAVIOR ====================
@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px 20px 0px'
   });
   
   revealElements.forEach(el => {
