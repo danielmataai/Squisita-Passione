@@ -443,3 +443,95 @@ window.addEventListener('load', function() {
   // Load any third-party scripts here
   // Example: Analytics, chat widgets, etc.
 });
+
+// ==================== LIGHTBOX ====================
+(function() {
+  // Build lightbox HTML
+  const lb = document.createElement('div');
+  lb.id = 'lightbox';
+  lb.innerHTML = `
+    <div class="lb-overlay"></div>
+    <button class="lb-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lb-prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"/></svg>
+    </button>
+    <button class="lb-next" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </button>
+    <div class="lb-img-wrap">
+      <img class="lb-img" src="" alt="">
+    </div>
+    <div class="lb-counter"></div>
+  `;
+  document.body.appendChild(lb);
+
+  let images = [];
+  let current = 0;
+
+  const lbEl    = document.getElementById('lightbox');
+  const lbImg   = lbEl.querySelector('.lb-img');
+  const lbCtr   = lbEl.querySelector('.lb-counter');
+  const lbPrev  = lbEl.querySelector('.lb-prev');
+  const lbNext  = lbEl.querySelector('.lb-next');
+
+  function open(imgs, idx) {
+    images  = imgs;
+    current = idx;
+    show();
+    lbEl.classList.add('lb-active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lbEl.classList.remove('lb-active');
+    document.body.style.overflow = '';
+  }
+
+  function show() {
+    lbImg.style.opacity = '0';
+    lbImg.src = images[current].src;
+    lbImg.alt = images[current].alt;
+    lbImg.onload = () => { lbImg.style.opacity = '1'; };
+    lbCtr.textContent = (current + 1) + ' / ' + images.length;
+    lbPrev.style.display = images.length > 1 ? '' : 'none';
+    lbNext.style.display = images.length > 1 ? '' : 'none';
+  }
+
+  function prev() { current = (current - 1 + images.length) % images.length; show(); }
+  function next() { current = (current + 1) % images.length; show(); }
+
+  lbEl.querySelector('.lb-overlay').addEventListener('click', close);
+  lbEl.querySelector('.lb-close').addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+
+  document.addEventListener('keydown', function(e) {
+    if (!lbEl.classList.contains('lb-active')) return;
+    if (e.key === 'Escape')     close();
+    if (e.key === 'ArrowLeft')  prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // Attach to all tour day images
+  function initLightbox() {
+    // Group images by their parent .tour-day or .day-exp
+    document.querySelectorAll('.tour-day__image img, .tour-day__images img').forEach(function(img) {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function() {
+        const parent = img.closest('.tour-day__images') || img.closest('.tour-day');
+        const siblings = parent ? Array.from(parent.querySelectorAll('img')) : [img];
+        const idx = siblings.indexOf(img);
+        open(siblings, idx);
+      });
+    });
+  }
+
+  // Init after page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLightbox);
+  } else {
+    initLightbox();
+  }
+})();
