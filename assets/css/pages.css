@@ -1384,9 +1384,9 @@
 }
 
 .tour-partner-badge__img {
-  height: 44px;
+  height: 132px;
   width: auto;
-  max-width: 120px;
+  max-width: 300px;
   object-fit: contain;
   opacity: 0.85;
   transition: var(--transition-fast);
