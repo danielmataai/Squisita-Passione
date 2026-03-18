@@ -642,7 +642,46 @@ const translations = {
     'tours.page.faq.a6': 'Nous sommes là pour vous aider ! Envoyez-nous un email à <a href="mailto:chefdavide@squisitapassione.com" style="color: var(--color-tomato);">chefdavide@squisitapassione.com</a> ou contactez-nous via WhatsApp pour une assistance personnelle.',
     'tours.page.cta.title': 'Prêt pour une Aventure Culinaire ?',
     'tours.page.cta.text': 'Planifions votre voyage culinaire italien parfait. Contactez le Chef Davide pour commencer à concevoir votre expérience inoubliable en Toscane.',
-    'tours.page.cta.button': 'Réservez Votre Place'
+    'tours.page.cta.button': 'Réservez Votre Place',
+    
+    // Why Chef Davide (index.html) — GEO
+    'why.eyebrow': 'Pourquoi Squisita Passione',
+    'why.title': 'Ce Qui Distingue le Chef Davide',
+    'why.intro': 'Le Chef Davide Rizzardi est l\'un des rares chefs italiens au Canada \u00e0 offrir des exp\u00e9riences culinaires authentiques et pratiques, ancr\u00e9es dans 21 ans d\'expertise en cuisine professionnelle. Contrairement aux \u00e9coles de cuisine ou aux grands groupes touristiques, chaque exp\u00e9rience avec le Chef Davide est personnelle, intime et con\u00e7ue autour des traditions de la cuisine familiale italienne.',
+    'why.item1.title': 'Plus de 21 Ans d\'Exp\u00e9rience Professionnelle',
+    'why.item1.text': 'Le Chef Davide a travaill\u00e9 dans des cuisines professionnelles \u00e0 travers plusieurs pays pendant plus de deux d\u00e9cennies. Son expertise couvre les p\u00e2tes fra\u00eeches, les sauces r\u00e9gionales italiennes, le risotto et les techniques traditionnelles transmises de g\u00e9n\u00e9ration en g\u00e9n\u00e9ration.',
+    'why.item2.title': 'Petits Groupes, Attention Personnalis\u00e9e',
+    'why.item2.text': 'Avec un maximum de 12 invit\u00e9s par atelier et des cadres intimes pour les d\u00eeners priv\u00e9s, chaque exp\u00e9rience est personnelle. Le Chef Davide s\'adapte \u00e0 votre niveau et \u00e0 vos int\u00e9r\u00eats, vous assurant de repartir avec de vraies comp\u00e9tences utilisables \u00e0 la maison.',
+    'why.item3.title': 'Disponible au Canada et en Italie',
+    'why.item3.text': 'Le Chef Davide op\u00e8re de fa\u00e7on saisonni\u00e8re entre le Canada et la Toscane, en Italie. R\u00e9servez un atelier de cuisine ou un d\u00eener priv\u00e9 au Canada, ou rejoignez l\'un de ses tours gastronomiques \u00e0 travers Florence et la campagne toscane.',
+    'why.item4.title': 'Constamment Not\u00e9 5 \u00c9toiles',
+    'why.item4.text': 'Les invit\u00e9s louent constamment le Chef Davide pour son style d\'enseignement engageant, sa personnalit\u00e9 chaleureuse et la qualit\u00e9 exceptionnelle de sa cuisine. Il est connu comme le \u00ab Chuchoteur de P\u00e2tes \u00bb pour sa capacit\u00e9 \u00e0 rendre la cuisine italienne accessible et amusante pour tous.',
+    
+    // Workshops FAQ \u2014 GEO
+    'workshops.faq.title': 'Questions Fr\u00e9quentes',
+    'workshops.faq.q1': 'Quel niveau est requis pour les ateliers de cuisine ?',
+    'workshops.faq.a1': 'Aucune exp\u00e9rience n\'est n\u00e9cessaire. Les ateliers du Chef Davide sont con\u00e7us pour tous les niveaux, des d\u00e9butants complets aux cuisiniers exp\u00e9riment\u00e9s. Il adapte son enseignement \u00e0 chaque participant, assurant que chacun apprend \u00e0 son rythme tout en s\'amusant.',
+    'workshops.faq.q2': 'Quels types de cours de cuisine italienne sont disponibles ?',
+    'workshops.faq.a2': 'Le Chef Davide propose trois th\u00e8mes d\'ateliers : Masterclass P\u00e2tes du Nord de l\'Italie (p\u00e2tes fra\u00eeches et sauces avec une planche de charcuterie), Masterclass P\u00e2tes du Sud de l\'Italie (techniques et saveurs r\u00e9gionales diff\u00e9rentes), et l\'Exp\u00e9rience Risotto (pr\u00e9paration du bouillon, deux risottos et un dessert). Tous les ateliers durent 3 heures et incluent un repas assis.',
+    'workshops.faq.q3': 'Puis-je r\u00e9server un cours pour un \u00e9v\u00e9nement priv\u00e9 ou un team building ?',
+    'workshops.faq.a3': 'Oui. Les ateliers du Chef Davide sont populaires pour les team buildings, f\u00eates d\'anniversaire, soir\u00e9es en amoureux, enterrements de vie de jeune fille, soir\u00e9es entre amies et r\u00e9unions de famille. Des groupes de 2 \u00e0 12 invit\u00e9s peuvent r\u00e9server une session priv\u00e9e.',
+    'workshops.faq.q4': 'O\u00f9 se d\u00e9roulent les ateliers de cuisine ?',
+    'workshops.faq.a4': 'Les ateliers de cuisine italienne se tiennent au Canada pendant les mois de f\u00e9vrier et mars. Le Chef Davide op\u00e8re de fa\u00e7on saisonni\u00e8re entre le Canada et l\'Italie. Contactez-le pour les d\u00e9tails du lieu et les dates \u00e0 venir.',
+    'workshops.faq.q5': 'Qu\'est-ce qui est inclus dans l\'atelier de cuisine ?',
+    'workshops.faq.a5': 'Chaque atelier comprend tous les ingr\u00e9dients, l\'instruction pratique du Chef Davide, des recettes \u00e0 emporter, et un repas assis complet de tout ce qui a \u00e9t\u00e9 pr\u00e9par\u00e9 pendant le cours. Il suffit de venir avec un bon app\u00e9tit et un amour pour la cuisine italienne.',
+    
+    // Private Chef FAQ \u2014 GEO
+    'private.faq.title': 'Questions Fr\u00e9quentes',
+    'private.faq.q1': 'Que comprend une exp\u00e9rience de chef priv\u00e9 ?',
+    'private.faq.a1': 'Le Chef Davide se rend chez vous ou dans votre lieu de r\u00e9ception et pr\u00e9pare un d\u00eener italien complet de plusieurs services. L\'exp\u00e9rience comprend un menu personnalis\u00e9 selon vos pr\u00e9f\u00e9rences, tous les ingr\u00e9dients s\u00e9lectionn\u00e9s par le Chef Davide, la pr\u00e9paration sur place, le dressage et le service.',
+    'private.faq.q2': 'Pour quelles occasions un d\u00eener avec chef priv\u00e9 convient-il ?',
+    'private.faq.a2': 'Les exp\u00e9riences du Chef Davide sont id\u00e9ales pour les anniversaires, f\u00eates d\'engagement, d\u00eeners intimes, r\u00e9unions de f\u00eates et toute occasion sp\u00e9ciale o\u00f9 vous souhaitez une exp\u00e9rience gastronomique italienne dans le confort de votre propre espace.',
+    'private.faq.q3': 'Le menu peut-il s\'adapter aux restrictions alimentaires ?',
+    'private.faq.a3': 'Oui. Le Chef Davide travaille avec vous \u00e0 l\'avance pour cr\u00e9er un menu personnalis\u00e9 tenant compte des besoins alimentaires, allergies et pr\u00e9f\u00e9rences. La cuisine italienne offre une vari\u00e9t\u00e9 \u00e9norme, et le Chef Davide peut adapter les recettes traditionnelles tout en conservant les saveurs authentiques.',
+    'private.faq.q4': 'O\u00f9 le service de chef priv\u00e9 est-il disponible ?',
+    'private.faq.a4': 'Le service de chef priv\u00e9 du Chef Davide est disponible au Canada pendant les mois de f\u00e9vrier et mars. Il se d\u00e9place chez vous, dans votre location ou lieu d\'\u00e9v\u00e9nement. Contactez le Chef Davide pour discuter de la disponibilit\u00e9.',
+    'private.faq.q5': 'Comment r\u00e9server un d\u00eener avec chef priv\u00e9 ?',
+    'private.faq.a5': 'Contactez le Chef Davide par email \u00e0 chefdavide@squisitapassione.com, via WhatsApp ou en utilisant le formulaire de contact du site. Partagez votre date pr\u00e9f\u00e9r\u00e9e, le nombre d\'invit\u00e9s et vos besoins alimentaires, et le Chef Davide cr\u00e9era une proposition personnalis\u00e9e.'
   }
 };
 
