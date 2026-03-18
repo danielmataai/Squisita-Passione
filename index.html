@@ -1030,35 +1030,50 @@
     })();
   </script>
   <script>
-    // Gallery Lightbox
+    // Gallery Lightbox — Native-feel viewer
     const lightbox = document.getElementById('galleryLightbox');
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxCounter = document.getElementById('lightboxCounter');
     const galleryItems = document.querySelectorAll('.gallery__scroll .gallery__item img');
     let currentIndex = 0;
+    let isTransitioning = false;
     
     // Open lightbox
     galleryItems.forEach((img, index) => {
       img.addEventListener('click', () => {
         currentIndex = index;
-        updateLightbox();
+        lightboxImage.src = galleryItems[currentIndex].src;
+        lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
       });
     });
     
-    // Update lightbox image
-    function updateLightbox() {
-      lightboxImage.src = galleryItems[currentIndex].src;
-      lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
-    }
-    
-    // Navigate
+    // Navigate with crossfade
     function navigate(direction) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      
       currentIndex += direction;
       if (currentIndex < 0) currentIndex = galleryItems.length - 1;
       if (currentIndex >= galleryItems.length) currentIndex = 0;
-      updateLightbox();
+      
+      lightboxImage.classList.add('lightbox__image--transitioning');
+      
+      setTimeout(() => {
+        lightboxImage.src = galleryItems[currentIndex].src;
+        lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+        
+        lightboxImage.onload = () => {
+          lightboxImage.classList.remove('lightbox__image--transitioning');
+          isTransitioning = false;
+        };
+        // Fallback in case onload doesn't fire (cached image)
+        setTimeout(() => {
+          lightboxImage.classList.remove('lightbox__image--transitioning');
+          isTransitioning = false;
+        }, 300);
+      }, 200);
     }
     
     // Close lightbox
@@ -1080,6 +1095,27 @@
       if (e.key === 'ArrowLeft') navigate(-1);
       if (e.key === 'ArrowRight') navigate(1);
     });
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchDeltaX = 0;
+    
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    
+    lightbox.addEventListener('touchend', (e) => {
+      const deltaX = e.changedTouches[0].screenX - touchStartX;
+      const deltaY = e.changedTouches[0].screenY - touchStartY;
+      
+      // Only trigger if horizontal swipe is dominant
+      if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX < 0) navigate(1);  // swipe left = next
+        else navigate(-1);            // swipe right = prev
+      }
+    }, { passive: true });
     
     // Availability Widget
     const availabilityBtn = document.getElementById('availabilityBtn');
