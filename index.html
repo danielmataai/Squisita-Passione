@@ -1030,13 +1030,13 @@
     })();
   </script>
   <script>
-    // Gallery Lightbox — Native-feel viewer
+    // Gallery Lightbox
     const lightbox = document.getElementById('galleryLightbox');
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxCounter = document.getElementById('lightboxCounter');
     const galleryItems = document.querySelectorAll('.gallery__scroll .gallery__item img');
     let currentIndex = 0;
-    let isTransitioning = false;
+    let isNavigating = false;
     
     // Open lightbox
     galleryItems.forEach((img, index) => {
@@ -1051,29 +1051,34 @@
     
     // Navigate with crossfade
     function navigate(direction) {
-      if (isTransitioning) return;
-      isTransitioning = true;
+      if (isNavigating) return;
+      isNavigating = true;
       
       currentIndex += direction;
       if (currentIndex < 0) currentIndex = galleryItems.length - 1;
       if (currentIndex >= galleryItems.length) currentIndex = 0;
       
-      lightboxImage.classList.add('lightbox__image--transitioning');
+      // Fade out
+      lightboxImage.classList.add('lightbox__image--fading');
       
       setTimeout(() => {
+        // Swap image while hidden
         lightboxImage.src = galleryItems[currentIndex].src;
         lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
         
-        lightboxImage.onload = () => {
-          lightboxImage.classList.remove('lightbox__image--transitioning');
-          isTransitioning = false;
+        // Fade in after load
+        const fadeIn = () => {
+          lightboxImage.classList.remove('lightbox__image--fading');
+          isNavigating = false;
+          lightboxImage.removeEventListener('load', fadeIn);
         };
-        // Fallback in case onload doesn't fire (cached image)
-        setTimeout(() => {
-          lightboxImage.classList.remove('lightbox__image--transitioning');
-          isTransitioning = false;
-        }, 300);
-      }, 200);
+        lightboxImage.addEventListener('load', fadeIn);
+        
+        // Fallback for cached images
+        if (lightboxImage.complete) {
+          fadeIn();
+        }
+      }, 250);
     }
     
     // Close lightbox
@@ -1099,7 +1104,6 @@
     // Touch/swipe support for mobile
     let touchStartX = 0;
     let touchStartY = 0;
-    let touchDeltaX = 0;
     
     lightbox.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -1109,11 +1113,9 @@
     lightbox.addEventListener('touchend', (e) => {
       const deltaX = e.changedTouches[0].screenX - touchStartX;
       const deltaY = e.changedTouches[0].screenY - touchStartY;
-      
-      // Only trigger if horizontal swipe is dominant
       if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
-        if (deltaX < 0) navigate(1);  // swipe left = next
-        else navigate(-1);            // swipe right = prev
+        if (deltaX < 0) navigate(1);
+        else navigate(-1);
       }
     }, { passive: true });
     
