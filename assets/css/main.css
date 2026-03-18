@@ -443,6 +443,12 @@ p {
   color: var(--color-white);
 }
 
+.passione-mode.header--scrolled .header__cta:hover,
+.passione-mode .header--scrolled .header__cta:hover {
+  background-color: var(--color-black);
+  color: var(--color-white) !important;
+}
+
 /* Passione Toggle */
 .passione-toggle {
   display: flex;
