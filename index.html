@@ -1069,29 +1069,31 @@
       if (currentIndex < 0) currentIndex = galleryItems.length - 1;
       if (currentIndex >= galleryItems.length) currentIndex = 0;
       
-      // Step 1: Slide current image out
       const exitClass = direction > 0 ? 'lightbox__image--exit-left' : 'lightbox__image--exit-right';
       const enterClass = direction > 0 ? 'lightbox__image--enter-right' : 'lightbox__image--enter-left';
       
+      // Step 1: Slide out
       clearSlideClasses();
       lightboxImage.classList.add(exitClass);
       
       setTimeout(() => {
-        // Step 2: Swap src while off-screen, position on enter side
+        // Step 2: Swap image, jump to enter position (no transition)
         lightboxImage.src = galleryItems[currentIndex].src;
         lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
         clearSlideClasses();
         lightboxImage.classList.add(enterClass);
         
-        // Step 3: Force reflow then slide in
-        lightboxImage.offsetHeight;
-        clearSlideClasses();
-        
-        setTimeout(() => {
-          isAnimating = false;
-          processQueue();
-        }, 300);
-      }, 200);
+        // Step 3: Wait for browser to paint enter position, then animate to center
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            clearSlideClasses();
+            setTimeout(() => {
+              isAnimating = false;
+              processQueue();
+            }, 300);
+          });
+        });
+      }, 220);
     }
     
     // Navigate (queues rapid inputs, max 3 ahead)
