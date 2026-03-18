@@ -1237,12 +1237,32 @@ p {
   max-height: 88vh;
   object-fit: contain;
   border-radius: 2px;
-  transition: opacity 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
   -webkit-touch-callout: none;
 }
 
-.lightbox__image.lightbox__image--fading {
+.lightbox__image--exit-left {
+  transform: translateX(-60px);
   opacity: 0;
+  transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+}
+
+.lightbox__image--exit-right {
+  transform: translateX(60px);
+  opacity: 0;
+  transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+}
+
+.lightbox__image--enter-left {
+  transform: translateX(-60px);
+  opacity: 0;
+  transition: none;
+}
+
+.lightbox__image--enter-right {
+  transform: translateX(60px);
+  opacity: 0;
+  transition: none;
 }
 
 .lightbox__close {

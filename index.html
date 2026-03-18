@@ -1036,12 +1036,21 @@
     const lightboxCounter = document.getElementById('lightboxCounter');
     const galleryItems = document.querySelectorAll('.gallery__scroll .gallery__item img');
     let currentIndex = 0;
-    let isNavigating = false;
+    let navQueue = [];
+    let isAnimating = false;
+    
+    function clearSlideClasses() {
+      lightboxImage.classList.remove(
+        'lightbox__image--exit-left', 'lightbox__image--exit-right',
+        'lightbox__image--enter-left', 'lightbox__image--enter-right'
+      );
+    }
     
     // Open lightbox
     galleryItems.forEach((img, index) => {
       img.addEventListener('click', () => {
         currentIndex = index;
+        clearSlideClasses();
         lightboxImage.src = galleryItems[currentIndex].src;
         lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
         lightbox.classList.add('active');
@@ -1049,40 +1058,53 @@
       });
     });
     
-    // Navigate with crossfade
-    function navigate(direction) {
-      if (isNavigating) return;
-      isNavigating = true;
+    // Process navigation queue
+    function processQueue() {
+      if (isAnimating || navQueue.length === 0) return;
+      isAnimating = true;
+      
+      const direction = navQueue.shift();
       
       currentIndex += direction;
       if (currentIndex < 0) currentIndex = galleryItems.length - 1;
       if (currentIndex >= galleryItems.length) currentIndex = 0;
       
-      // Fade out
-      lightboxImage.classList.add('lightbox__image--fading');
+      // Step 1: Slide current image out
+      const exitClass = direction > 0 ? 'lightbox__image--exit-left' : 'lightbox__image--exit-right';
+      const enterClass = direction > 0 ? 'lightbox__image--enter-right' : 'lightbox__image--enter-left';
+      
+      clearSlideClasses();
+      lightboxImage.classList.add(exitClass);
       
       setTimeout(() => {
-        // Swap image while hidden
+        // Step 2: Swap src while off-screen, position on enter side
         lightboxImage.src = galleryItems[currentIndex].src;
         lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+        clearSlideClasses();
+        lightboxImage.classList.add(enterClass);
         
-        // Fade in after load
-        const fadeIn = () => {
-          lightboxImage.classList.remove('lightbox__image--fading');
-          isNavigating = false;
-          lightboxImage.removeEventListener('load', fadeIn);
-        };
-        lightboxImage.addEventListener('load', fadeIn);
+        // Step 3: Force reflow then slide in
+        lightboxImage.offsetHeight;
+        clearSlideClasses();
         
-        // Fallback for cached images
-        if (lightboxImage.complete) {
-          fadeIn();
-        }
-      }, 250);
+        setTimeout(() => {
+          isAnimating = false;
+          processQueue();
+        }, 300);
+      }, 200);
+    }
+    
+    // Navigate (queues rapid inputs, max 3 ahead)
+    function navigate(direction) {
+      if (navQueue.length < 3) navQueue.push(direction);
+      processQueue();
     }
     
     // Close lightbox
     function closeLightbox() {
+      navQueue = [];
+      isAnimating = false;
+      clearSlideClasses();
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
     }
