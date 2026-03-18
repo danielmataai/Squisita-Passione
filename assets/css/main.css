@@ -2323,3 +2323,83 @@ p {
 .mb-2 { margin-bottom: var(--space-xl); }
 .mb-3 { margin-bottom: var(--space-2xl); }
 .mb-4 { margin-bottom: var(--space-3xl); }
+
+/* =====================================================
+   WHY CHEF DAVIDE SECTION (GEO)
+   ===================================================== */
+.why-davide {
+  padding: 6rem 0;
+}
+
+.why-davide__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.why-davide__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-tomato);
+  margin-bottom: 0.75rem;
+}
+
+.why-davide__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.why-davide__content {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.why-davide__intro {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.why-davide__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.why-davide__item {
+  padding: 1.5rem;
+  border-left: 3px solid var(--color-tomato);
+}
+
+.why-davide__item-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+}
+
+.why-davide__item-text {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .why-davide__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .why-davide {
+    padding: 4rem 0;
+  }
+}

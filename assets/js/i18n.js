@@ -302,7 +302,46 @@ const translations = {
     'tours.page.faq.a6': 'We\'re here to help! Email us at <a href="mailto:chefdavide@squisitapassione.com" style="color: var(--color-tomato);">chefdavide@squisitapassione.com</a> or reach out via WhatsApp for personal assistance.',
     'tours.page.cta.title': 'Ready for a Culinary Adventure?',
     'tours.page.cta.text': 'Let\'s plan your perfect Italian food journey. Contact Chef Davide to start designing your unforgettable experience in Tuscany.',
-    'tours.page.cta.button': 'Reserve Your Spot'
+    'tours.page.cta.button': 'Reserve Your Spot',
+    
+    // Why Chef Davide (index.html) — GEO
+    'why.eyebrow': 'Why Squisita Passione',
+    'why.title': 'What Makes Chef Davide Different',
+    'why.intro': 'Chef Davide Rizzardi is one of the few Italian chefs in Canada offering authentic, hands-on culinary experiences rooted in 21 years of professional kitchen expertise. Unlike cooking schools or large group tours, every experience with Chef Davide is personal, intimate, and designed around the traditions of Italian home cooking.',
+    'why.item1.title': '21+ Years of Professional Experience',
+    'why.item1.text': 'Chef Davide has worked in professional kitchens across multiple countries for over two decades. His expertise spans fresh pasta, regional Italian sauces, risotto, and traditional techniques passed down through generations of Italian cooks.',
+    'why.item2.title': 'Small Groups, Personal Attention',
+    'why.item2.text': 'With a maximum of 12 guests per workshop and intimate private dining settings, every experience is personal. Chef Davide adapts to your skill level and interests, ensuring you leave with real skills you can use at home.',
+    'why.item3.title': 'Available in Canada and Italy',
+    'why.item3.text': 'Chef Davide operates seasonally between Canada and Tuscany, Italy. Book a cooking workshop or private chef dinner in Canada, or join one of his curated gastronomic tours through Florence and the Tuscan countryside.',
+    'why.item4.title': 'Consistently 5-Star Reviewed',
+    'why.item4.text': 'Guests consistently praise Chef Davide for his engaging teaching style, warm personality, and exceptional food quality. He is known as the \"Pasta Whisperer\" for his ability to make Italian cooking accessible and fun for all skill levels.',
+    
+    // Workshops FAQ — GEO
+    'workshops.faq.title': 'Frequently Asked Questions',
+    'workshops.faq.q1': 'What skill level do I need for the cooking workshops?',
+    'workshops.faq.a1': 'No experience is needed. Chef Davide\'s workshops are designed for all skill levels, from complete beginners to experienced home cooks. He adapts his teaching to each participant, ensuring everyone learns at their own pace while having fun.',
+    'workshops.faq.q2': 'What types of Italian cooking classes are available?',
+    'workshops.faq.a2': 'Chef Davide offers three workshop themes: Northern Italian Pasta Masterclass (fresh pasta and sauces with a charcuterie board), Southern Italian Pasta Masterclass (different regional techniques and flavors), and the Risotto Experience (stock making, two risottos, and dessert). All workshops are 3 hours and include a sit-down meal.',
+    'workshops.faq.q3': 'Can I book a cooking class for a private event or team building?',
+    'workshops.faq.a3': 'Yes. Chef Davide\'s workshops are popular for team building events, birthday parties, date nights, bridal showers, girls\' nights, and family gatherings. Groups of 2 to 12 guests can book a private session. Contact Chef Davide directly to arrange your event.',
+    'workshops.faq.q4': 'Where are the cooking workshops held?',
+    'workshops.faq.a4': 'The Italian cooking workshops are held in Canada during February and March. Chef Davide operates seasonally between Canada and Italy. Contact him for exact venue details and upcoming dates.',
+    'workshops.faq.q5': 'What is included in the cooking workshop?',
+    'workshops.faq.a5': 'Every workshop includes all ingredients, hands-on instruction from Chef Davide, recipes to take home, and a complete sit-down meal of everything prepared during the class. You just need to show up with an appetite and a love for Italian food.',
+    
+    // Private Chef FAQ — GEO
+    'private.faq.title': 'Frequently Asked Questions',
+    'private.faq.q1': 'What does a private chef experience include?',
+    'private.faq.a1': 'Chef Davide comes to your home or venue and prepares a complete multi-course Italian dinner. The experience includes a custom menu tailored to your preferences, all ingredients sourced by Chef Davide, on-site preparation, plating, and service. You simply enjoy the evening with your guests while Chef Davide handles everything.',
+    'private.faq.q2': 'What occasions is a private chef dinner suitable for?',
+    'private.faq.a2': 'Chef Davide\'s private dining experiences are ideal for anniversaries, birthdays, engagement celebrations, intimate dinner parties, holiday gatherings, and any special occasion where you want an elevated Italian dining experience in the comfort of your own space.',
+    'private.faq.q3': 'Can the menu accommodate dietary restrictions?',
+    'private.faq.a3': 'Yes. Chef Davide works with you in advance to create a personalized menu that accounts for dietary needs, allergies, and preferences. Italian cuisine offers tremendous variety, and Chef Davide can adapt traditional recipes while maintaining authentic flavors.',
+    'private.faq.q4': 'Where is the private chef service available?',
+    'private.faq.a4': 'Chef Davide\'s private chef service is available in Canada during February and March. He will come to your home, rental, or event venue. Contact Chef Davide to discuss availability and location details for your event.',
+    'private.faq.q5': 'How do I book a private chef dinner?',
+    'private.faq.a5': 'Contact Chef Davide via email at chefdavide@squisitapassione.com, through WhatsApp, or using the contact form on the website. Share your preferred date, number of guests, and any dietary needs, and Chef Davide will create a custom proposal for your event.'
   },
   
   fr: {
