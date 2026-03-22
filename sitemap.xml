@@ -36,6 +36,14 @@
         <priority>0.9</priority>
     </url>
     
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://squisitapassione.com/privacy.html</loc>
+        <lastmod>2026-03-22</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
     <!-- LLMs.txt — AI Crawler Content -->
     <url>
         <loc>https://squisitapassione.com/llms.txt</loc>
