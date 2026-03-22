@@ -470,6 +470,21 @@
     </div>
   </footer>
 
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-consent__inner">
+      <p class="cookie-consent__text">
+        <span data-i18n="consent.text">We use cookies to analyze site traffic and improve your experience. No personal data is sold or shared with third parties.</span>
+        <a href="privacy.html" data-i18n="consent.link">Privacy Policy</a>
+      </p>
+      <div class="cookie-consent__actions">
+        <button class="cookie-consent__btn cookie-consent__btn--decline" onclick="spConsent.decline()" data-i18n="consent.decline">Decline</button>
+        <button class="cookie-consent__btn cookie-consent__btn--accept" onclick="spConsent.accept()" data-i18n="consent.accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/consent.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
   <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>

@@ -135,6 +135,41 @@ const translations = {
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     
+    // Cookie Consent
+    'consent.text': 'We use cookies to analyze site traffic and improve your experience. No personal data is sold or shared with third parties.',
+    'consent.accept': 'Accept',
+    'consent.decline': 'Decline',
+    'consent.link': 'Privacy Policy',
+
+    // Privacy Policy Page
+    'privacy.title': 'Privacy Policy',
+    'privacy.updated': 'Last updated: March 2026',
+    'privacy.intro.title': 'Introduction',
+    'privacy.intro.text': 'Squisita Passione ("we," "us," or "our"), operated by Chef Davide Rizzardi, is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website squisitapassione.com.',
+    'privacy.collect.title': 'Information We Collect',
+    'privacy.collect.text': 'We collect limited information to improve your experience and respond to your inquiries:',
+    'privacy.collect.item1': '<strong>Contact form submissions:</strong> When you fill out our contact form, we collect your name, email address, service interest, preferred date, number of guests, and message. This information is used solely to respond to your inquiry.',
+    'privacy.collect.item2': '<strong>Analytics data:</strong> With your consent, we use Google Analytics 4 (GA4) to collect anonymized usage data such as pages visited, time on site, general geographic region, and device type. This helps us understand how visitors use our website so we can improve it.',
+    'privacy.collect.item3': '<strong>Cookie preferences:</strong> We store your cookie consent choice (accept or decline) in your browser\'s local storage so we don\'t ask you again on each visit.',
+    'privacy.cookies.title': 'Cookies & Tracking',
+    'privacy.cookies.text': 'We only use cookies if you explicitly accept them through our cookie consent banner. If you decline, no tracking cookies are set and Google Analytics is not loaded. You can change your preference at any time by clearing your browser\'s local storage.',
+    'privacy.sharing.title': 'How We Use & Share Your Data',
+    'privacy.sharing.text': 'We do <strong>not</strong> sell, rent, or share your personal information with third parties for marketing purposes. Your contact form data is used exclusively to respond to your inquiries. Analytics data is processed by Google under their privacy terms and is used solely for understanding website traffic patterns.',
+    'privacy.rights.title': 'Your Rights',
+    'privacy.rights.text': 'Under the GDPR (European Union), PIPEDA, and Quebec\'s Law 25 (Canada), you have the right to:',
+    'privacy.rights.item1': 'Access the personal data we hold about you',
+    'privacy.rights.item2': 'Request correction or deletion of your data',
+    'privacy.rights.item3': 'Withdraw your consent for cookies at any time',
+    'privacy.rights.item4': 'Object to the processing of your data',
+    'privacy.retention.title': 'Data Retention',
+    'privacy.retention.text': 'Contact form submissions are retained only as long as necessary to respond to your inquiry and maintain a record of our communication. Analytics data is retained according to Google Analytics\' standard retention settings.',
+    'privacy.children.title': 'Children\'s Privacy',
+    'privacy.children.text': 'Our website is not directed at children under 16. We do not knowingly collect personal information from children.',
+    'privacy.changes.title': 'Changes to This Policy',
+    'privacy.changes.text': 'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.',
+    'privacy.contact.title': 'Contact Us',
+    'privacy.contact.text': 'If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact us at <a href="mailto:chefdavide@squisitapassione.com">chefdavide@squisitapassione.com</a>.',
+
     // Workshops Page
     'workshops.hero.eyebrow': 'Experience',
     'workshops.hero.title': 'Italian Cooking Workshops',
@@ -475,8 +510,43 @@ const translations = {
     'footer.privacy': 'Politique de Confidentialité',
     'footer.terms': 'Conditions d\'Utilisation',
     
+    // Cookie Consent
+    'consent.text': 'Nous utilisons des cookies pour analyser le trafic du site et am\u00e9liorer votre exp\u00e9rience. Aucune donn\u00e9e personnelle n\'est vendue ni partag\u00e9e avec des tiers.',
+    'consent.accept': 'Accepter',
+    'consent.decline': 'Refuser',
+    'consent.link': 'Politique de Confidentialit\u00e9',
+
+    // Privacy Policy Page
+    'privacy.title': 'Politique de Confidentialit\u00e9',
+    'privacy.updated': 'Derni\u00e8re mise \u00e0 jour : mars 2026',
+    'privacy.intro.title': 'Introduction',
+    'privacy.intro.text': 'Squisita Passione (\u00ab nous \u00bb ou \u00ab notre \u00bb), exploit\u00e9 par le Chef Davide Rizzardi, s\'engage \u00e0 prot\u00e9ger votre vie priv\u00e9e. Cette politique de confidentialit\u00e9 explique comment nous collectons, utilisons et prot\u00e9geons vos informations lorsque vous visitez notre site web squisitapassione.com.',
+    'privacy.collect.title': 'Informations que Nous Collectons',
+    'privacy.collect.text': 'Nous collectons des informations limit\u00e9es pour am\u00e9liorer votre exp\u00e9rience et r\u00e9pondre \u00e0 vos demandes :',
+    'privacy.collect.item1': '<strong>Soumissions du formulaire de contact :</strong> Lorsque vous remplissez notre formulaire de contact, nous collectons votre nom, adresse email, int\u00e9r\u00eat pour un service, date pr\u00e9f\u00e9r\u00e9e, nombre d\'invit\u00e9s et message. Ces informations sont utilis\u00e9es uniquement pour r\u00e9pondre \u00e0 votre demande.',
+    'privacy.collect.item2': '<strong>Donn\u00e9es analytiques :</strong> Avec votre consentement, nous utilisons Google Analytics 4 (GA4) pour collecter des donn\u00e9es d\'utilisation anonymis\u00e9es telles que les pages visit\u00e9es, le temps pass\u00e9 sur le site, la r\u00e9gion g\u00e9ographique g\u00e9n\u00e9rale et le type d\'appareil. Cela nous aide \u00e0 comprendre comment les visiteurs utilisent notre site.',
+    'privacy.collect.item3': '<strong>Pr\u00e9f\u00e9rences de cookies :</strong> Nous stockons votre choix de consentement aux cookies (accepter ou refuser) dans le stockage local de votre navigateur afin de ne pas vous le redemander \u00e0 chaque visite.',
+    'privacy.cookies.title': 'Cookies et Suivi',
+    'privacy.cookies.text': 'Nous n\'utilisons des cookies que si vous les acceptez explicitement via notre banni\u00e8re de consentement. Si vous refusez, aucun cookie de suivi n\'est install\u00e9 et Google Analytics n\'est pas charg\u00e9. Vous pouvez modifier votre pr\u00e9f\u00e9rence \u00e0 tout moment en effacant le stockage local de votre navigateur.',
+    'privacy.sharing.title': 'Comment Nous Utilisons et Partageons Vos Donn\u00e9es',
+    'privacy.sharing.text': 'Nous ne <strong>vendons pas</strong>, ne louons pas et ne partageons pas vos informations personnelles avec des tiers \u00e0 des fins marketing. Les donn\u00e9es du formulaire de contact sont utilis\u00e9es exclusivement pour r\u00e9pondre \u00e0 vos demandes. Les donn\u00e9es analytiques sont trait\u00e9es par Google selon leurs conditions de confidentialit\u00e9.',
+    'privacy.rights.title': 'Vos Droits',
+    'privacy.rights.text': 'En vertu du RGPD (Union europ\u00e9enne), de la LPRPDE et de la Loi 25 du Qu\u00e9bec (Canada), vous avez le droit de :',
+    'privacy.rights.item1': 'Acc\u00e9der aux donn\u00e9es personnelles que nous d\u00e9tenons \u00e0 votre sujet',
+    'privacy.rights.item2': 'Demander la correction ou la suppression de vos donn\u00e9es',
+    'privacy.rights.item3': 'Retirer votre consentement aux cookies \u00e0 tout moment',
+    'privacy.rights.item4': 'Vous opposer au traitement de vos donn\u00e9es',
+    'privacy.retention.title': 'Conservation des Donn\u00e9es',
+    'privacy.retention.text': 'Les soumissions du formulaire de contact sont conserv\u00e9es uniquement le temps n\u00e9cessaire pour r\u00e9pondre \u00e0 votre demande et maintenir un registre de notre communication. Les donn\u00e9es analytiques sont conserv\u00e9es selon les param\u00e8tres standard de Google Analytics.',
+    'privacy.children.title': 'Vie Priv\u00e9e des Enfants',
+    'privacy.children.text': 'Notre site web n\'est pas destin\u00e9 aux enfants de moins de 16 ans. Nous ne collectons pas sciemment d\'informations personnelles aupr\u00e8s d\'enfants.',
+    'privacy.changes.title': 'Modifications de Cette Politique',
+    'privacy.changes.text': 'Nous pouvons mettre \u00e0 jour cette politique de confidentialit\u00e9 de temps \u00e0 autre. Toute modification sera publi\u00e9e sur cette page avec une date de r\u00e9vision mise \u00e0 jour.',
+    'privacy.contact.title': 'Nous Contacter',
+    'privacy.contact.text': 'Si vous avez des questions concernant cette politique de confidentialit\u00e9 ou souhaitez exercer vos droits, veuillez nous contacter \u00e0 <a href="mailto:chefdavide@squisitapassione.com">chefdavide@squisitapassione.com</a>.',
+
     // Workshops Page
-    'workshops.hero.eyebrow': 'Expérience',
+    'workshops.hero.eyebrow': 'Exp\u00e9rience',
     'workshops.hero.title': 'Ateliers de Cuisine Italienne',
     'workshops.hero.description': 'Cours pratiques où tradition et passion se rencontrent',
     'workshops.intro.title': 'Apprenez l\'Art de la Cuisine Italienne',
@@ -712,6 +782,11 @@ class I18n {
       this.saveLanguage(lang);
       this.updatePageLanguage();
       this.updateLanguageButtons();
+      
+      // Update consent banner language
+      if (window.spConsent && window.spConsent.updateLanguage) {
+        window.spConsent.updateLanguage(lang);
+      }
       
       // Update HTML lang attribute
       document.documentElement.lang = lang;
