@@ -218,9 +218,10 @@ const translations = {
     // Tours Page
     'tours.page.choose.eyebrow': 'Your Adventure, Your Way',
     'tours.page.choose.title': 'Choose Your Experience',
-    'tours.page.hero.eyebrow': 'Discover Tuscany',
+    'tours.page.hero.eyebrow': 'Chef Davide Rizzardi',
     'tours.page.hero.title': 'Informal Gastronomic Tours',
-    'tours.page.hero.description': 'Choose your perfect Italian culinary adventure, from a full week to a single day',
+    'tours.page.hero.description': 'Tuscany, Italy \u2014 Coming 2026',
+    'tours.page.hero.cta': 'Join the Priority List',
     'tours.page.intro.main': 'Chef Davide offers three ways to experience the authentic flavors of Tuscany. Whether you want the complete immersion, the culinary experiences without accommodation, or just a taste of a single day. There\'s a perfect option for you.',
     
     // Tour Selector
@@ -593,9 +594,10 @@ const translations = {
     // Tours Page
     'tours.page.choose.eyebrow': 'Votre Aventure, À Votre Façon',
     'tours.page.choose.title': 'Choisissez Votre Expérience',
-    'tours.page.hero.eyebrow': 'Découvrez la Toscane',
+    'tours.page.hero.eyebrow': 'Chef Davide Rizzardi',
     'tours.page.hero.title': 'Tours Gastronomiques Informels',
-    'tours.page.hero.description': 'Choisissez votre aventure culinaire italienne, d\'une semaine complète à une seule journée',
+    'tours.page.hero.description': 'Toscane, Italie \u2014 Bient\u00f4t en 2026',
+    'tours.page.hero.cta': 'Rejoindre la Liste Prioritaire',
     'tours.page.intro.main': 'Le Chef Davide propose trois façons de vivre les saveurs authentiques de la Toscane. Que vous souhaitiez une immersion complète, les expériences culinaires sans hébergement, ou simplement un avant-goût d\'une journée. Il y a une option parfaite pour vous.',
     
     // Tour Selector

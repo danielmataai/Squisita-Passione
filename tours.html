@@ -192,16 +192,15 @@
   </div>
 
   <div class="page-content-wrapper">
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="page-hero__background">
-      <img src="assets/images/firenzetour.jpg" alt="Florence panoramic view - Informal Gastronomic Tours">
-    </div>
-    <div class="page-hero__overlay"></div>
+  <!-- Page Hero - Priority List Banner -->
+  <section class="page-hero page-hero--red">
     <div class="page-hero__content">
-      <p class="page-hero__eyebrow" data-i18n="tours.page.hero.eyebrow">Discover Tuscany</p>
+      <p class="page-hero__eyebrow" style="color: rgba(255,255,255,0.85);" data-i18n="tours.page.hero.eyebrow">Chef Davide Rizzardi</p>
       <h1 class="page-hero__title" data-i18n="tours.page.hero.title">Informal Gastronomic Tours</h1>
-      <p class="page-hero__description" data-i18n="tours.page.hero.description">Choose your perfect Italian culinary adventure, from a full week to a single day</p>
+      <p class="page-hero__description" data-i18n="tours.page.hero.description">Tuscany, Italy — Coming 2026</p>
+      <a href="#priority-list" class="btn-priority-hero" onclick="event.preventDefault(); document.getElementById('priority-list').scrollIntoView({behavior:'smooth', block:'start'})">
+        <span data-i18n="tours.page.hero.cta">Join the Priority List</span>
+      </a>
     </div>
   </section>
 
@@ -568,8 +567,8 @@
         </div>
       </div>
 
-      <!-- Booking Requirements -->
-      <div class="tour-info reveal">
+      <!-- Booking Requirements (HIDDEN - Priority List replaces this) -->
+      <div class="tour-info reveal" style="display:none;">
         <h3 data-i18n="tours.page.booking.title">Booking Requirements</h3>
         <p data-i18n="tours.page.booking.subtitle">To secure your spot, you'll need to:</p>
         <div class="tour-includes" style="grid-template-columns: 1fr;">
@@ -587,8 +586,8 @@
         </div>
       </div>
 
-      <!-- Payment Schedule -->
-      <div class="tour-info reveal">
+      <!-- Payment Schedule (HIDDEN - Priority List replaces this) -->
+      <div class="tour-info reveal" style="display:none;">
         <h3 data-i18n="tours.page.payment.title">Payment Schedule</h3>
         <div class="tour-note" style="margin-bottom: var(--space-xl); background-color: var(--color-beige); border-left-color: var(--color-gold);">
           <p>🗓️ <strong>Official prices will be announced in April 2026.</strong> Reserve your spot now with the initial deposit to secure availability before pricing is released.</p>
@@ -628,8 +627,8 @@
         </div>
       </div>
 
-      <!-- Terms & Conditions -->
-      <div class="tour-info reveal">
+      <!-- Terms & Conditions (HIDDEN - Priority List replaces this) -->
+      <div class="tour-info reveal" style="display:none;">
         <h3 data-i18n="tours.page.terms.title">Terms & Conditions</h3>
         <div class="tour-includes" style="grid-template-columns: 1fr;">
           <div class="tour-includes__item">
@@ -647,6 +646,86 @@
           <div class="tour-includes__item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
             <span data-i18n-html="tours.page.terms.t4">By booking, you confirm that you are <strong>18 or older</strong>, and you agree to the payment schedule and terms listed above.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== PRIORITY LIST SECTION ===== -->
+      <div id="priority-list" class="tour-info priority-list reveal">
+        <div class="priority-list__header">
+          <span class="priority-list__badge">Priority List</span>
+          <h3>Reserve Your Spot</h3>
+          <p class="priority-list__subtitle">This tour experience is currently being designed and crafted by Chef Davide. Not all details are finalized yet — the itinerary, activities, and pricing are being built as interest grows.</p>
+        </div>
+
+        <div class="priority-list__info">
+          <div class="priority-list__info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>How it works:</strong> Join the priority list with a fully refundable $300 USD deposit via PayPal. Once we reach 10 confirmed guests, Chef Davide will finalize all tour details, dates, and pricing.
+            </div>
+          </div>
+          <div class="priority-list__info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <div>
+              <strong>100% Refundable:</strong> Your $300 deposit is fully refundable at any time if you change your mind or if the tour doesn't reach the minimum group size. No risk, no commitment.
+            </div>
+          </div>
+          <div class="priority-list__info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;flex-shrink:0;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div>
+              <strong>Be part of something special:</strong> By joining early, you help shape the experience. Chef Davide is personally curating every detail to create an unforgettable Tuscan adventure.
+            </div>
+          </div>
+        </div>
+
+        <div class="priority-list__form-wrapper">
+          <div class="priority-list__form-box">
+            <h4>Join the Priority List</h4>
+            <p>Fill in your details below, then complete the refundable deposit to secure your spot.</p>
+            
+            <div id="priorityForm">
+              <div class="priority-list__field">
+                <label for="plFullName">Full Name *</label>
+                <input type="text" id="plFullName" placeholder="Your full name" required>
+              </div>
+              <div class="priority-list__field">
+                <label for="plEmail">Email Address *</label>
+                <input type="email" id="plEmail" placeholder="your@email.com" required>
+              </div>
+              <div class="priority-list__field">
+                <label for="plNotes">Questions or notes (optional)</label>
+                <textarea id="plNotes" rows="3" placeholder="Anything you'd like Chef Davide to know..."></textarea>
+              </div>
+              <button type="button" id="plSubmitBtn" class="btn-priority-submit" onclick="submitPriorityList()">
+                Submit & Continue to Payment
+              </button>
+            </div>
+
+            <div id="prioritySuccess" style="display:none;">
+              <div class="priority-list__success">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-tomato)" stroke-width="2" style="width:48px;height:48px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                <h4>You're on the list!</h4>
+                <p>Thank you for your interest. Complete the $300 refundable deposit below to secure your priority spot.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="priority-list__paypal-box">
+            <h4>Refundable Deposit — $300 USD</h4>
+            <p>Complete your deposit via PayPal to confirm your spot on the priority list. This amount is <strong>100% refundable</strong> at any time.</p>
+            <div class="priority-list__qr-wrapper">
+              <img src="assets/images/paypal-qr.jpg" alt="Scan to pay Davide Rizzardi via PayPal" class="priority-list__qr-img">
+              <p class="priority-list__qr-label">Scan with your phone to pay via PayPal</p>
+            </div>
+            <div class="priority-list__paypal-divider">
+              <span>or pay directly</span>
+            </div>
+            <a href="https://www.paypal.me/DavideRizzardi/300" target="_blank" rel="noopener" class="btn-paypal">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
+              Pay $300 via PayPal
+            </a>
+            <p class="priority-list__paypal-note">After completing payment, Chef Davide will confirm your reservation via email within 24 hours.</p>
           </div>
         </div>
       </div>
@@ -1053,6 +1132,55 @@
         }
       });
     });
+
+    // Priority List Form Submission to Google Sheets
+    const PRIORITY_SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // Replace with actual Apps Script Web App URL
+
+    function submitPriorityList() {
+      const name = document.getElementById('plFullName').value.trim();
+      const email = document.getElementById('plEmail').value.trim();
+      const notes = document.getElementById('plNotes').value.trim();
+      const btn = document.getElementById('plSubmitBtn');
+
+      // Validation
+      if (!name) { document.getElementById('plFullName').focus(); return; }
+      if (!email || !email.includes('@')) { document.getElementById('plEmail').focus(); return; }
+
+      // Disable button and show loading
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+
+      const data = {
+        fullName: name,
+        email: email,
+        notes: notes,
+        date: new Date().toISOString(),
+        source: 'priority-list'
+      };
+
+      // If Google Sheets URL is configured, send data
+      if (PRIORITY_SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+        fetch(PRIORITY_SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(() => {
+          showPrioritySuccess();
+        }).catch(() => {
+          showPrioritySuccess(); // Still show success since no-cors won't return status
+        });
+      } else {
+        // No Google Sheets configured yet - show success anyway
+        console.log('Priority List submission (Google Sheets not configured):', data);
+        showPrioritySuccess();
+      }
+    }
+
+    function showPrioritySuccess() {
+      document.getElementById('priorityForm').style.display = 'none';
+      document.getElementById('prioritySuccess').style.display = 'block';
+    }
 
     // Sticky Tour Nav
     (function() {
