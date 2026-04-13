@@ -1743,6 +1743,9 @@
 /* ==================== PRIORITY LIST SECTION ==================== */
 .priority-list {
   margin-top: var(--space-3xl);
+  background: var(--color-tomato);
+  padding: var(--space-4xl) var(--space-3xl);
+  border-radius: 20px;
 }
 
 .priority-list__header {
@@ -1756,7 +1759,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  color: var(--color-tomato);
+  color: rgba(255,255,255,0.6);
   margin-bottom: var(--space-md);
 }
 
@@ -1764,20 +1767,20 @@
   font-family: var(--font-display);
   font-size: var(--text-3xl);
   font-weight: 400;
-  color: var(--color-black);
+  color: var(--color-white);
   margin-bottom: var(--space-lg);
 }
 
 .priority-list__header-line {
   width: 60px;
   height: 2px;
-  background: var(--color-tomato);
+  background: rgba(255,255,255,0.4);
   margin: 0 auto var(--space-xl);
 }
 
 .priority-list__subtitle {
   font-size: var(--text-base);
-  color: var(--color-gray);
+  color: rgba(255,255,255,0.8);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.8;
@@ -1791,8 +1794,8 @@
   gap: var(--space-2xl);
   padding: var(--space-2xl) 0;
   margin-bottom: var(--space-3xl);
-  border-top: 1px solid var(--color-beige-dark);
-  border-bottom: 1px solid var(--color-beige-dark);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 .priority-list__highlight {
@@ -1804,7 +1807,7 @@
   font-family: var(--font-display);
   font-size: var(--text-3xl);
   font-weight: 400;
-  color: var(--color-tomato);
+  color: var(--color-white);
   line-height: 1;
   margin-bottom: var(--space-xs);
 }
@@ -1812,7 +1815,7 @@
 .priority-list__highlight-label {
   font-family: var(--font-body);
   font-size: var(--text-sm);
-  color: var(--color-gray);
+  color: rgba(255,255,255,0.6);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -1820,14 +1823,14 @@
 .priority-list__highlight-divider {
   width: 1px;
   height: 50px;
-  background: var(--color-beige-dark);
+  background: rgba(255,255,255,0.2);
 }
 
 /* Two Columns */
 .priority-list__columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-4xl);
+  gap: var(--space-3xl);
   align-items: start;
 }
 
@@ -1835,19 +1838,23 @@
   font-family: var(--font-display);
   font-size: var(--text-xl);
   font-weight: 400;
-  color: var(--color-black);
+  color: var(--color-white);
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--color-beige-dark);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 /* Form Column */
 .priority-list__form-col {
   padding: var(--space-2xl);
-  background: var(--color-beige);
+  background: var(--color-white);
   border-radius: 16px;
 }
 
+.priority-list__form-col .priority-list__col-title {
+  color: var(--color-black);
+  border-bottom-color: var(--color-beige-dark);
+}
 .priority-list__field {
   margin-bottom: var(--space-lg);
 }
@@ -1942,9 +1949,13 @@
 
 .priority-list__payment-desc {
   font-size: var(--text-sm);
-  color: var(--color-gray);
+  color: rgba(255,255,255,0.8);
   line-height: 1.7;
   margin-bottom: var(--space-xl);
+}
+
+.priority-list__payment-desc strong {
+  color: var(--color-white);
 }
 
 .priority-list__qr-wrapper {
@@ -1955,7 +1966,10 @@
   width: 180px;
   height: 180px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 14px;
+  background: var(--color-white);
+  padding: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .priority-list__paypal-divider {
@@ -1963,7 +1977,7 @@
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
-  color: var(--color-gray-light);
+  color: rgba(255,255,255,0.4);
   font-size: var(--text-sm);
 }
 
@@ -1972,7 +1986,7 @@
   content: '';
   flex: 1;
   height: 1px;
-  background: var(--color-beige-dark);
+  background: rgba(255,255,255,0.2);
 }
 
 .btn-paypal {
@@ -1981,8 +1995,8 @@
   justify-content: center;
   gap: var(--space-sm);
   padding: 0.85rem 2rem;
-  background: #0070BA;
-  color: var(--color-white);
+  background: var(--color-white);
+  color: #0070BA;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -1994,14 +2008,14 @@
 }
 
 .btn-paypal:hover {
-  background: #005C9E;
+  background: var(--color-cream);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0,112,186,0.3);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .priority-list__fine-print {
   font-size: var(--text-xs);
-  color: var(--color-gray-light);
+  color: rgba(255,255,255,0.5);
   line-height: 1.6;
   max-width: 280px;
   margin: 0 auto;
@@ -2031,6 +2045,11 @@
 
   .priority-list__payment-col {
     padding: var(--space-xl) 0;
+  }
+
+  .priority-list {
+    padding: var(--space-2xl) var(--space-xl);
+    border-radius: 16px;
   }
 
   .page-hero--red {
