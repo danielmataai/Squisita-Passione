@@ -199,9 +199,9 @@
     </div>
     <div class="page-hero__overlay"></div>
     <div class="page-hero__content" style="position:relative; z-index:2;">
-      <h1 class="page-hero__title" style="opacity:1;">Priority List</h1>
-      <p class="page-hero__description" style="opacity:1;">Informal Gastronomic Tours — Florence &amp; Tuscany</p>
-      <a href="#priority-list" class="btn-priority-hero" style="opacity:1;" onclick="event.preventDefault(); document.getElementById('priority-list').scrollIntoView({behavior:'smooth', block:'start'})">
+      <h1 class="page-hero__title" style="opacity:1;" data-i18n="tours.page.hero.title">Priority List</h1>
+      <p class="page-hero__description" style="opacity:1;" data-i18n="tours.page.hero.description">Informal Gastronomic Tours — Florence &amp; Tuscany</p>
+      <a href="#priority-list" class="btn-priority-hero" style="opacity:1;" onclick="event.preventDefault(); document.getElementById('priority-list').scrollIntoView({behavior:'smooth', block:'start'})" data-i18n="tours.page.hero.cta">
         Reserve My Spot
       </a>
     </div>
@@ -658,8 +658,8 @@
         
         <!-- Header con social proof -->
         <div class="priority-list__header">
-          <p class="priority-list__eyebrow">Priority List — Limited to 10 Guests</p>
-          <h3>Your Tuscan Adventure Starts Here</h3>
+          <p class="priority-list__eyebrow" data-i18n="tours.pl.eyebrow">Priority List — Limited to 10 Guests</p>
+          <h3 data-i18n="tours.pl.title">Your Tuscan Adventure Starts Here</h3>
           <div class="priority-list__header-line"></div>
         </div>
 
@@ -668,7 +668,7 @@
           <div class="pl-progress__bar">
             <div class="pl-progress__fill" style="width: 30%;"></div>
           </div>
-          <p class="pl-progress__text"><strong>3 of 10</strong> spots claimed — once full, the tour is confirmed</p>
+          <p class="pl-progress__text" data-i18n-html="tours.pl.progress"><strong>3 of 10</strong> spots claimed — once full, the tour is confirmed</p>
         </div>
 
         <!-- Two Column: Form + Payment -->
@@ -676,53 +676,53 @@
           
           <!-- Left: Form -->
           <div class="priority-list__form-col">
-            <div class="pl-step-label"><span class="pl-step-num">1</span> Enter your details</div>
+            <div class="pl-step-label"><span class="pl-step-num">1</span> <span data-i18n="tours.pl.step1">Enter your details</span></div>
             <div id="priorityForm">
               <div class="priority-list__field">
-                <label for="plFullName">Full Name</label>
+                <label for="plFullName" data-i18n="tours.pl.name">Full Name</label>
                 <input type="text" id="plFullName" placeholder="e.g. John Smith" required>
               </div>
               <div class="priority-list__field">
-                <label for="plEmail">Email Address</label>
+                <label for="plEmail" data-i18n="tours.pl.email">Email Address</label>
                 <input type="email" id="plEmail" placeholder="e.g. john@email.com" required>
               </div>
-              <button type="button" id="plSubmitBtn" class="btn-priority-submit" onclick="submitPriorityList()">
+              <button type="button" id="plSubmitBtn" class="btn-priority-submit" onclick="submitPriorityList()" data-i18n="tours.pl.submit">
                 Reserve My Spot
               </button>
-              <p class="pl-form-note">No payment info required here — just your name to hold your place.</p>
+              <p class="pl-form-note" data-i18n="tours.pl.formnote">No payment info required here — just your name to hold your place.</p>
             </div>
             <div id="prioritySuccess" style="display:none;">
               <div class="priority-list__success">
                 <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-tomato)" stroke-width="2" style="width:36px;height:36px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                <h4>You’re in!</h4>
-                <p>Now complete the deposit to lock in your spot.</p>
+                <h4 data-i18n="tours.pl.success.title">You’re in!</h4>
+                <p data-i18n="tours.pl.success.text">Now complete the deposit to lock in your spot.</p>
               </div>
             </div>
 
             <!-- Early bird perks -->
             <div class="pl-perks">
-              <p class="pl-perks__title">Early bird advantages</p>
-              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Priority room selection</div>
-              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Help shape the experience</div>
-              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Locked-in pricing guarantee</div>
+              <p class="pl-perks__title" data-i18n="tours.pl.perks.title">Early bird advantages</p>
+              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> <span data-i18n="tours.pl.perks.p1">Priority room selection</span></div>
+              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> <span data-i18n="tours.pl.perks.p2">Help shape the experience</span></div>
+              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> <span data-i18n="tours.pl.perks.p3">Locked-in pricing guarantee</span></div>
             </div>
           </div>
 
           <!-- Right: Payment -->
           <div class="priority-list__payment-col">
-            <div class="pl-step-label pl-step-label--light"><span class="pl-step-num pl-step-num--light">2</span> Secure with deposit</div>
+            <div class="pl-step-label pl-step-label--light"><span class="pl-step-num pl-step-num--light">2</span> <span data-i18n="tours.pl.step2">Secure with deposit</span></div>
             <div class="priority-list__qr-wrapper">
               <img src="assets/images/paypal-qr.jpg" alt="Scan to pay Davide Rizzardi via PayPal" class="priority-list__qr-img">
             </div>
-            <div class="priority-list__paypal-divider"><span>or</span></div>
+            <div class="priority-list__paypal-divider"><span data-i18n="tours.pl.or">or</span></div>
             <a href="https://www.paypal.me/DavideRizzardi/300CAD" target="_blank" rel="noopener" class="btn-paypal">
               <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
-              Pay $300 CAD via PayPal
+              <span data-i18n="tours.pl.paypal">Pay $300 CAD via PayPal</span>
             </a>
             <!-- Trust signals -->
             <div class="pl-trust">
-              <div class="pl-trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 100% refundable, anytime</div>
-              <div class="pl-trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Confirmation within 24h</div>
+              <div class="pl-trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span data-i18n="tours.pl.trust1">100% refundable, anytime</span></div>
+              <div class="pl-trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> <span data-i18n="tours.pl.trust2">Confirmation within 24h</span></div>
             </div>
           </div>
 
@@ -732,17 +732,17 @@
         <div class="pl-next">
           <div class="pl-next__step">
             <div class="pl-next__icon">1</div>
-            <p>You join the list</p>
+            <p data-i18n="tours.pl.next1">You join the list</p>
           </div>
           <div class="pl-next__arrow">→</div>
           <div class="pl-next__step">
             <div class="pl-next__icon">2</div>
-            <p>Chef Davide confirms in 24h</p>
+            <p data-i18n="tours.pl.next2">Chef Davide confirms in 24h</p>
           </div>
           <div class="pl-next__arrow">→</div>
           <div class="pl-next__step">
             <div class="pl-next__icon">3</div>
-            <p>10 guests reached = tour confirmed</p>
+            <p data-i18n="tours.pl.next3">10 guests reached = tour confirmed</p>
           </div>
         </div>
 
