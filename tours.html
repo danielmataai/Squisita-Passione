@@ -658,30 +658,19 @@
       <!-- ===== PRIORITY LIST SECTION ===== -->
       <div id="priority-list" class="priority-list reveal">
         
-        <!-- Elegant Header -->
+        <!-- Header con social proof -->
         <div class="priority-list__header">
-          <p class="priority-list__eyebrow">Priority List</p>
-          <h3>Reserve Your Spot in Tuscany</h3>
+          <p class="priority-list__eyebrow">Priority List — Limited to 10 Guests</p>
+          <h3>Your Tuscan Adventure Starts Here</h3>
           <div class="priority-list__header-line"></div>
-          <p class="priority-list__subtitle">This experience is being personally curated by Chef Davide. Join the priority list to secure your place — once we reach 10 guests, all details will be finalized and your Tuscan adventure begins.</p>
         </div>
 
-        <!-- Key Points - Minimal -->
-        <div class="priority-list__highlights">
-          <div class="priority-list__highlight">
-            <span class="priority-list__highlight-number">$300</span>
-            <span class="priority-list__highlight-label">Refundable deposit</span>
+        <!-- Progress bar FOMO -->
+        <div class="pl-progress">
+          <div class="pl-progress__bar">
+            <div class="pl-progress__fill" style="width: 30%;"></div>
           </div>
-          <div class="priority-list__highlight-divider"></div>
-          <div class="priority-list__highlight">
-            <span class="priority-list__highlight-number">100%</span>
-            <span class="priority-list__highlight-label">Risk-free guarantee</span>
-          </div>
-          <div class="priority-list__highlight-divider"></div>
-          <div class="priority-list__highlight">
-            <span class="priority-list__highlight-number">10</span>
-            <span class="priority-list__highlight-label">Guests to confirm</span>
-          </div>
+          <p class="pl-progress__text"><strong>3 of 10</strong> spots claimed — once full, the tour is confirmed</p>
         </div>
 
         <!-- Two Column: Form + Payment -->
@@ -689,45 +678,78 @@
           
           <!-- Left: Form -->
           <div class="priority-list__form-col">
-            <h4 class="priority-list__col-title">Your Details</h4>
+            <div class="pl-step-label"><span class="pl-step-num">1</span> Enter your details</div>
             <div id="priorityForm">
               <div class="priority-list__field">
-                <label for="plFullName">Full Name</label>
-                <input type="text" id="plFullName" placeholder="First and last name" required>
+                <input type="text" id="plFullName" placeholder="Full name" required>
               </div>
               <div class="priority-list__field">
-                <label for="plEmail">Email Address</label>
-                <input type="email" id="plEmail" placeholder="your@email.com" required>
+                <input type="email" id="plEmail" placeholder="Email address" required>
               </div>
               <button type="button" id="plSubmitBtn" class="btn-priority-submit" onclick="submitPriorityList()">
-                Submit &amp; Continue to Payment
+                Reserve My Spot
               </button>
+              <p class="pl-form-note">No payment info required here — just your name to hold your place.</p>
             </div>
             <div id="prioritySuccess" style="display:none;">
               <div class="priority-list__success">
-                <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-tomato)" stroke-width="2" style="width:40px;height:40px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                <h4>You’re on the list!</h4>
-                <p>Now complete the deposit to secure your priority spot.</p>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-tomato)" stroke-width="2" style="width:36px;height:36px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                <h4>You’re in!</h4>
+                <p>Now complete the deposit to lock in your spot.</p>
               </div>
+            </div>
+
+            <!-- Early bird perks -->
+            <div class="pl-perks">
+              <p class="pl-perks__title">Early bird advantages</p>
+              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Priority room selection</div>
+              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Help shape the experience</div>
+              <div class="pl-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Locked-in pricing guarantee</div>
             </div>
           </div>
 
           <!-- Right: Payment -->
           <div class="priority-list__payment-col">
-            <h4 class="priority-list__col-title">Secure Your Spot</h4>
-            <p class="priority-list__payment-desc">Scan the QR code or click below to send your <strong>fully refundable</strong> $300 deposit via PayPal.</p>
+            <div class="pl-step-label pl-step-label--light"><span class="pl-step-num pl-step-num--light">2</span> Secure with deposit</div>
+            <div class="pl-price-anchor">
+              <span class="pl-price-anchor__amount">$300</span>
+              <span class="pl-price-anchor__reframe">That’s less than $43/day for 7 days in Tuscany</span>
+            </div>
             <div class="priority-list__qr-wrapper">
               <img src="assets/images/paypal-qr.jpg" alt="Scan to pay Davide Rizzardi via PayPal" class="priority-list__qr-img">
             </div>
             <div class="priority-list__paypal-divider"><span>or</span></div>
             <a href="https://www.paypal.me/DavideRizzardi/300" target="_blank" rel="noopener" class="btn-paypal">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
-              Pay via PayPal
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
+              Pay $300 via PayPal
             </a>
-            <p class="priority-list__fine-print">Chef Davide will confirm your reservation within 24 hours. Your deposit can be refunded at any time, no questions asked.</p>
+            <!-- Trust signals -->
+            <div class="pl-trust">
+              <div class="pl-trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 100% refundable, anytime</div>
+              <div class="pl-trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> Confirmation within 24h</div>
+            </div>
           </div>
 
         </div>
+
+        <!-- What happens next -->
+        <div class="pl-next">
+          <div class="pl-next__step">
+            <div class="pl-next__icon">1</div>
+            <p>You join the list</p>
+          </div>
+          <div class="pl-next__arrow">→</div>
+          <div class="pl-next__step">
+            <div class="pl-next__icon">2</div>
+            <p>Chef Davide confirms in 24h</p>
+          </div>
+          <div class="pl-next__arrow">→</div>
+          <div class="pl-next__step">
+            <div class="pl-next__icon">3</div>
+            <p>10 guests reached = tour confirmed</p>
+          </div>
+        </div>
+
       </div>
 
       <!-- CTA for Tour 1 -->
