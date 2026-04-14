@@ -2055,24 +2055,27 @@
 }
 
 .pl-next__step {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .pl-next__icon {
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   border-radius: 50%;
   background: rgba(255,255,255,0.2);
   color: var(--color-white);
   font-size: var(--text-sm);
   font-weight: 700;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .pl-next__step p {
@@ -2081,6 +2084,8 @@
   color: rgba(255,255,255,0.8);
   white-space: nowrap;
   margin: 0;
+  padding: 0;
+  line-height: 36px;
 }
 
 .pl-next__arrow {
