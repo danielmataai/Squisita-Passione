@@ -1150,7 +1150,7 @@
     });
 
     // Priority List Form Submission to Google Sheets
-    const PRIORITY_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxrsjsS46fGfO7QsWsv4-16E9aHsfZYrljGrPM0AH4IrOXcWl-e2yiJlD1q3Ky6B0DBIA/exec';
+    const PRIORITY_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyBo1Z6wzbz02d_0GNGuzOD4NgsADfjLGgW9JZLZGOvCNVMrzdMOZ21ALsevhJpzlrYCA/exec';
 
     function submitPriorityList() {
       const name = document.getElementById('plFullName').value.trim();
@@ -1172,17 +1172,16 @@
         source: 'priority-list'
       };
 
-      // If Google Sheets URL is configured, send data
-      if (PRIORITY_SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+      if (PRIORITY_SHEET_URL) {
         fetch(PRIORITY_SHEET_URL, {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        }).then(() => {
+          body: JSON.stringify(data),
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+        }).then(function() {
           showPrioritySuccess();
-        }).catch(() => {
-          showPrioritySuccess(); // Still show success since no-cors won't return status
+        }).catch(function() {
+          // CORS redirect may error but data still saves
+          showPrioritySuccess();
         });
       } else {
         // No Google Sheets configured yet - show success anyway
