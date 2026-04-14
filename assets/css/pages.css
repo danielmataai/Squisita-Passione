@@ -2051,17 +2051,19 @@
   margin-top: var(--space-xl);
   padding-top: var(--space-lg);
   border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
 }
 
 .pl-next__step {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
 }
 
 .pl-next__icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(255,255,255,0.2);
   color: var(--color-white);
@@ -2078,11 +2080,13 @@
   font-weight: 500;
   color: rgba(255,255,255,0.8);
   white-space: nowrap;
+  margin: 0;
 }
 
 .pl-next__arrow {
   color: rgba(255,255,255,0.35);
   font-size: var(--text-lg);
+  align-self: center;
 }
 
 /* Responsive */

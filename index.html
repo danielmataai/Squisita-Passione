@@ -920,6 +920,43 @@
     </div>
   </section>
 
+  <!-- Contact Form Script -->
+  <script>
+  (function() {
+    var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyBo1Z6wzbz02d_0GNGuzOD4NgsADfjLGgW9JZLZGOvCNVMrzdMOZ21ALsevhJpzlrYCA/exec';
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      var data = {
+        source: 'contact-form',
+        name: form.querySelector('#name').value.trim(),
+        email: form.querySelector('#email').value.trim(),
+        service: form.querySelector('#service').value,
+        preferredDate: form.querySelector('#date').value,
+        guests: form.querySelector('#guests').value,
+        message: form.querySelector('#message').value.trim(),
+        date: new Date().toISOString()
+      };
+      fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function() {
+        form.innerHTML = '<div style="text-align:center;padding:var(--space-2xl);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-tomato)" stroke-width="2" style="width:48px;height:48px;margin-bottom:var(--space-md);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg><h3 style="font-family:var(--font-display);margin-bottom:var(--space-sm);">Message Sent!</h3><p style="color:var(--color-gray);">Chef Davide will get back to you shortly.</p></div>';
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      });
+    });
+  })();
+  </script>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
