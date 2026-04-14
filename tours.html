@@ -969,7 +969,7 @@
       </div>
 
       <!-- WhatsApp CTA for Tour 3 -->
-      <div class="tour-whatsapp-cta tour-whatsapp-cta--centered reveal">
+      <div id="tour3-whatsapp" class="tour-whatsapp-cta tour-whatsapp-cta--centered reveal">
         <h3 data-i18n="tours.page.t3.cta.title">Interested in a Day Experience?</h3>
         <p data-i18n="tours.page.t3.cta.text">Send Chef Davide a message to check availability, pricing, and to book your perfect day in Tuscany.</p>
         <a href="https://wa.me/15149839297?text=Hi%20Chef%20Davide!%20I'm%20interested%20in%20booking%20a%20single%20Day%20Experience%20in%20Tuscany.%20Could%20you%20share%20more%20details?" target="_blank" rel="noopener" class="btn-whatsapp btn-whatsapp--large">
@@ -1146,6 +1146,14 @@
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+      });
+    });
+
+    // Day Experience cards → scroll to WhatsApp CTA
+    document.querySelectorAll('.day-exp').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        document.getElementById('tour3-whatsapp').scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
 
