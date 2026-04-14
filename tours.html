@@ -679,10 +679,12 @@
             <div class="pl-step-label"><span class="pl-step-num">1</span> Enter your details</div>
             <div id="priorityForm">
               <div class="priority-list__field">
-                <input type="text" id="plFullName" placeholder="Full name" required>
+                <label for="plFullName">Full Name</label>
+                <input type="text" id="plFullName" placeholder="e.g. John Smith" required>
               </div>
               <div class="priority-list__field">
-                <input type="email" id="plEmail" placeholder="Email address" required>
+                <label for="plEmail">Email Address</label>
+                <input type="email" id="plEmail" placeholder="e.g. john@email.com" required>
               </div>
               <button type="button" id="plSubmitBtn" class="btn-priority-submit" onclick="submitPriorityList()">
                 Reserve My Spot
