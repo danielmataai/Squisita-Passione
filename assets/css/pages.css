@@ -1691,8 +1691,7 @@
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
-  opacity: 0;
-  animation: fadeInUp 0.8s var(--transition-elegant) 0.8s forwards;
+  margin-top: var(--space-lg);
 }
 
 .btn-priority-hero:hover {
