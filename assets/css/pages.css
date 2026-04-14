@@ -1988,7 +1988,8 @@
   margin-bottom: var(--space-md);
   color: rgba(255,255,255,0.4);
   font-size: var(--text-xs);
-  width: 220px;
+  width: 100%;
+  max-width: 260px;
 }
 
 .priority-list__paypal-divider::before,
@@ -2004,8 +2005,8 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  width: 220px;
-  padding: 0.85rem 0;
+  min-width: 220px;
+  padding: 0.85rem 2rem;
   background: var(--color-white);
   color: #0070BA;
   font-family: var(--font-body);
@@ -2016,6 +2017,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   margin-bottom: var(--space-md);
+  white-space: nowrap;
 }
 
 .btn-paypal:hover {
@@ -2134,6 +2136,6 @@
 
   .priority-list__paypal-divider,
   .btn-paypal {
-    width: 180px;
+    min-width: 180px;
   }
 }
