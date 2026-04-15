@@ -276,6 +276,7 @@ const translations = {
     'tours.page.t1.cta.title': 'Ready to Book the Full Experience?',
     'tours.page.t1.cta.text': 'Send Chef Davide a message to reserve your spot for the complete Tuscan adventure.',
     'tours.page.t1.cta.button': 'Book via WhatsApp',
+    'tours.page.t1.cta.imessage': 'iMessage',
     'tours.page.t2.cta.title': 'Interested in the Activities Package?',
     'tours.page.t2.cta.text': 'Contact Chef Davide directly for pricing and availability.',
     'tours.page.t2.cta.button': 'Message on WhatsApp',
@@ -291,6 +292,7 @@ const translations = {
     'tours.page.t3.cta.title': 'Interested in a Day Experience?',
     'tours.page.t3.cta.text': 'Send Chef Davide a message to check availability, pricing, and to book your perfect day in Tuscany.',
     'tours.page.t3.cta.button': 'Book via WhatsApp',
+    'tours.page.t3.cta.imessage': 'iMessage',
     
     'tours.page.intro.p1': 'Starting at the vibrant Mercato di Sant\'Ambrogio, you\'ll taste some of Italy\'s most authentic artisanal cheeses and charcuterie, meeting the flavors and stories behind each bite.',
     'tours.page.intro.p2': 'From horseback riding through the rolling Tuscan countryside, to sipping natural Italian wines in the heart of Florence, to mastering the art of the perfect aperitivo cocktail alongside a professional bartender, Chef Davide will guide you through his passion, rooted deeply in his own country.',
@@ -676,6 +678,7 @@ const translations = {
     'tours.page.t1.cta.title': 'Prêt à Réserver l\'Expérience Complète?',
     'tours.page.t1.cta.text': 'Envoyez un message au Chef Davide pour réserver votre place pour l\'aventure toscane complète.',
     'tours.page.t1.cta.button': 'Réserver via WhatsApp',
+    'tours.page.t1.cta.imessage': 'iMessage',
     'tours.page.t2.cta.title': 'Intéressé par le Forfait Activités?',
     'tours.page.t2.cta.text': 'Contactez le Chef Davide directement pour les tarifs et disponibilités.',
     'tours.page.t2.cta.button': 'Message sur WhatsApp',
@@ -691,6 +694,7 @@ const translations = {
     'tours.page.t3.cta.title': 'Intéressé par une Expérience d\'une Journée?',
     'tours.page.t3.cta.text': 'Envoyez un message au Chef Davide pour vérifier la disponibilité, les tarifs et réserver votre journée parfaite en Toscane.',
     'tours.page.t3.cta.button': 'Réserver via WhatsApp',
+    'tours.page.t3.cta.imessage': 'iMessage',
     
     'tours.page.intro.p1': 'En commençant par le vibrant Mercato di Sant\'Ambrogio, vous goûterez certains des fromages et charcuteries artisanaux les plus authentiques d\'Italie, découvrant les saveurs et les histoires derrière chaque bouchée.',
     'tours.page.intro.p2': 'De l\'équitation à travers la campagne toscane, à la dégustation de vins naturels italiens au cœur de Florence, en passant par la maîtrise de l\'art du cocktail aperitivo parfait aux côtés d\'un barman professionnel, le Chef Davide vous guidera à travers sa passion, profondément enracinée dans son propre pays.',

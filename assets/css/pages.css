@@ -1691,6 +1691,43 @@
 }
 
 /* ==================== HERO PRIORITY BUTTON ==================== */
+
+/* iMessage Button */
+.btn-imessage {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.9rem 1.8rem;
+  background: #34C759;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-imessage svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-imessage:hover {
+  background: #2BA84A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52,199,89,0.3);
+}
+
+.btn-imessage--large {
+  padding: 1rem 2rem;
+  font-size: var(--text-base);
+}
+
+.tour-whatsapp-cta .btn-imessage {
+  margin-left: var(--space-md);
+}
+
 .btn-priority-hero {
   display: inline-block;
   background: var(--color-tomato);
